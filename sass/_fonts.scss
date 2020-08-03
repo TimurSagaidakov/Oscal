@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Regular.eot');
+	src: local('Montserrat Regular'), local('Montserrat-Regular'),
+		url('../fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+		url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Medium.eot');
+	src: local('Montserrat Medium'), local('Montserrat-Medium'),
+		url('../fonts/Montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat/Montserrat-Medium.woff') format('woff'),
+		url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Constantia';
+	src: url('../fonts/Constantia.eot');
+	src: local('Constantia'), local('Constantia'),
+		url('../fonts/Constantia.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin title {
+	font-family: 'Constantia' , 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3.6rem;
+}
+@mixin regular ($size:1.6rem, $color:null, $weight:normal){
+	font-family: 'Montserrat';
+    font-weight: $weight;
+    font-style: normal;
+    color: $color;
+    font-size: $size;
+}
+
+
