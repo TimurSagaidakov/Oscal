@@ -1,0 +1,78 @@
+.banner
+    width: 100%
+    &-first
+        background-image: url('../img/banner-door-1.png')
+        background-repeat: no-repeat
+        background-position: right bottom
+        background-size: contain
+        background-color: #F1F1F1
+        position: relative
+        &__bg
+            background-image: url('../img/banner-master-1.png')
+            background-repeat: no-repeat
+            background-position: center bottom
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+        &__title
+            +regular(2.4rem,#000000,bold)
+            text-transform: uppercase
+            padding: 4rem 0
+        &__subtitle
+            +regular(2.4rem,$dark,500)
+        &__text
+            +regular(1.8rem,$dark,500)
+            margin-bottom: 7rem
+        &__button
+            @extend .button
+            text-transform: uppercase
+            +regular(1.4rem,#ffffff,500)
+            background: $company-color
+            margin-bottom: 25rem
+            position: relative
+            z-index: 3
+            &:hover
+                background-color: darken($company-color, 5%)
+        &-popup
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            position: relative
+            &-item
+                flex-basis: 30%
+                background-color: #fff
+                border-radius: 3px 3px 0px 0px
+                position: absolute
+                height: 65px
+                top: -65px
+                left: 0
+                width: 30%
+                z-index: 2
+                padding: 1.5rem 5rem
+                overflow: hidden
+                transition: 0.2s
+                &:nth-child(2)
+                    left: 35%
+                &:nth-child(3)
+                    left: 70%
+                &-show
+                    display: flex
+                    align-items: center
+                &__text
+                    +regular(1.4rem,$dark,bold)
+                    text-transform: uppercase
+                    cursor: default
+                    margin-left: 15px
+                &__hide
+                    +regular(1.3rem,#000514,500)
+                    padding-top: 2rem
+                    line-height: 3rem
+                    cursor: default
+                &:hover
+                    top: -165px
+                    height: 200px
+                &:hover .banner-first-popup-item__text
+                        color: $company-color
+                        font-size: 2.5rem
