@@ -1,6 +1,7 @@
 .banner
     width: 100%
     position: relative
+    background-color: #f1f1f1
     &-first
         background-image: url('../img/banner-door-1.png')
         background-repeat: no-repeat
@@ -8,18 +9,17 @@
         background-size: contain
         background-color: #F1F1F1
         position: relative
-        max-height: 575px 
+        z-index: 5
+        height: 575px 
         padding: 0 2%
         @media ( max-width: $md)
             background-position: 300px bottom 
         @media ( max-width: $sm)
             background-position: 200px bottom 
             background-size: cover
-            max-height: 400px
+            height: 400px
         @media ( max-width: $xs)
-            max-height: 300px
-        &-wrapper
-            background-color: #f1f1f1
+            height: 300px
         &__bg
             background-image: url('../img/banner-master-1.png')
             background-repeat: no-repeat
@@ -36,7 +36,7 @@
             @media ( max-width: $sm )
                 background-size: 50%
         &__title
-            +regular(24,14,#000000,bold)
+            +regular(24,18,#000000,bold)
             text-transform: uppercase
             padding: 40px 0
             position: relative
@@ -46,8 +46,7 @@
         &__subtitle
             +regular(24,12,$dark,500)
             position: relative
-            z-index: 3
-            
+            z-index: 3            
         &__text
             +regular(18,10,$dark,500)
             margin-bottom: 70px
@@ -58,6 +57,7 @@
             text-transform: uppercase
             +regular(14,12,#ffffff,500)
             background: $company-color
+            padding: 15px 30px
             margin-bottom: 250px
             position: relative
             z-index: 3
@@ -107,23 +107,23 @@
                         +regular(20,10,$company-color,bold)
     &-second
         display: flex
-        min-height: 575px  
+        height: 575px  
         background-image: url('../img/banner-second.png') 
         background-repeat: no-repeat
         background-size: cover 
         @media ( max-width: $md)
             flex-direction: column
         @media ( max-width: $sm)
-            min-height: 400px
+            height: 400px
         @media ( max-width: $xs)
-            min-height: 300px
-        &-wrapper   
-            background-color: #f1f1f1
+            height: 300px
         &-sale
             display: flex
             flex-basis: 50%
             align-items: flex-start
             justify-content: flex-start
+            @media ( max-width: $md)
+                flex-basis: 10%
             &__text
                 +regular(18,10,#ffffff,500)
                 padding: 10px 20px
@@ -133,7 +133,6 @@
             flex-basis: 50%
             background-repeat: no-repeat
             background-size: cover
-            text-align: center
             &__title
                 +regular(36,25,#000000,600)
                 margin: 40px 0 100px 80px
@@ -161,14 +160,14 @@
         background-repeat: no-repeat
         background-size: cover
         background-position: center
-        min-height: 575px
+        height: 575px
         @media ( max-width: $md)
             flex-direction: column
             background-position: right 
         @media ( max-width: $sm)
-            min-height: 400px
+            height: 400px
         @media ( max-width: $xs)
-            min-height: 300px
+            height: 300px
         &-wrapper
             background-color: #f1f1f1
         &-sale
@@ -176,6 +175,8 @@
             position: relative
             z-index: 2
             @extend .banner-second-sale
+            @media ( max-width: $md)
+                flex-basis: 15%
             &-text
                 @extend .banner-second-sale__text
                 display: flex
@@ -192,11 +193,11 @@
             @media ( max-width: $md)
                 text-align: center
             &__title
-                +regular(36,25,#000000,600)
+                +regular(36,22,#000000,600)
                 text-transform: uppercase
                 margin: 50px 0 50px 90px
                 @media ( max-width: $md)
-                    margin: 50px 10px
+                    margin: 40px 0
                     text-shadow: 0 0 10px #ffffff
             &__order
                 +regular(18,12,$dark,500)
@@ -204,37 +205,50 @@
                 margin-left: 90px
                 line-height: 50px
                 @media ( max-width: $md)
-                    margin: 0 10px
+                    margin: 30px 0
                     text-shadow: 0 0 10px #ffffff
+                    line-height: 5px
             &__button
                 @extend .banner-second-key__button
+                margin-top: 50px
                 margin-bottom: 20px
+                @media ( max-width: $md)
+                    margin-top: 0
     &-fourth
         background-image: url('../img/banner-fourth.png')
         background-repeat: no-repeat
         background-size: cover
         background-position: center
         @media ( max-width:  $md)
-            background-position: -200px           
+            background-position: 0          
         &-wrapper
-            background-color: #f1f1f1
             position: relative
         &-sale
             flex-basis: 50%
+            @media ( max-width: $md )
+                flex-basis: 15%
     &-fifth
         background-image: url('../img/banner-fifth.png')
         background-repeat: no-repeat
         background-size: cover
         background-position: center
         @media ( max-width:  $md)
-            background-position: -100px           
+            background-position: 0          
         &-wrapper
             background-color: #f1f1f1
             position: relative
         &-sale
             flex-basis: 50%
+            @media ( max-width: $md )
+                flex-basis: 15%
         &-house
             flex-basis: 50%
+            &__order
+                line-height: 0
+                @media ( max-width: $sm )
+                    margin: 20px 0
+                p
+                    line-height: 20px
     &__bg
         position: absolute
         top: 0
@@ -250,7 +264,13 @@
         width: 70%
         position: absolute
         top: 50%
-        left: 15%
+        left: 50%
+        transform: translate(-50%,-50%)
+        z-index: 1
+        @media ( max-width: 1440px )
+            width: 95%
+        @media ( max-width: $md )
+            display: none
         &__prev
             width: 32px
             height: 32px    
@@ -269,7 +289,7 @@
             @extend .banner-arrow__prev
             transform: rotate(180deg)
             box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25)
-
+  
 
 
             

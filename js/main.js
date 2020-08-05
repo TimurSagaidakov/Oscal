@@ -41,7 +41,7 @@ $('.banner-wrapper').slick({
     prevArrow: $('.banner-arrow__prev'),
     nextArrow: $('.banner-arrow__next'),
     speed: 1000,
-    autoplay: true,
+    //autoplay: true,
     autoplaySpeed: 4000,   
     fade: true,
     pauseOnHover: true
