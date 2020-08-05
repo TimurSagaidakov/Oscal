@@ -7,7 +7,7 @@
             box-shadow: 0px 0px 50px #EBF0FA
         &__span
             display: block
-            +regular(1.2rem,$dark, 600)
+            +regular(12,10,$dark, 600)
             padding: 12px 0
     &-top
         display: flex
@@ -30,19 +30,24 @@
             @media ( max-width:  $lg)
                 display: none                
             &__red
-                +regular(2.4rem, $company-color, bold)
+                +regular(24,18, $company-color, bold)
                 margin-bottom: 1rem
             &__dark
-                +regular(1.4rem,$dark, 500)
+                +regular(14,10,$dark, 500)
+        &__img
+            @media ( max-width: 330px )
+                flex-basis: 40%
+                img
+                    width: 100%
         &-contacts
             display: flex
             flex-direction: column
             justify-content: center
             align-items: flex-end
             &__phone
-                +regular(2.4rem,#000000,bold)
+                +regular(24,14,#000000,bold)
             &__shedule
-                +regular(1.6rem,$dark)
+                +regular(16,10,$dark)
                 display: block
                 margin-top: 1rem
                 margin-bottom: 2rem
@@ -55,7 +60,7 @@
         list-style: none
         justify-content: space-between
         padding: 1.8rem 0 0 
-        +regular(1.6rem,rgba(0,5,20,0.8), 500)
+        +regular(16,10,rgba(0,5,20,0.8), 500)
         position: relative
         @media ( max-width: $md )
             position: absolute
@@ -64,7 +69,7 @@
             right: 0
             bottom: 0
             display: block
-            +regular(3rem)  
+            +regular(30,30)  
             background: linear-gradient(204.92deg, rgba(50, 66, 97, 0.5) -15.76%, rgba(255, 255, 255, 0) 85.14%), #ffffff  
             transform-origin: top
             overflow: hidden
@@ -73,7 +78,8 @@
             z-index: -1
             &.open
                 opacity: 1
-                top: 255px
+                top: 219px
+                z-index: 10
         &__link
             display: inline-block
             text-decoration: none
@@ -156,7 +162,7 @@
             justify-content: space-between             
             &-menu   
                 list-style: none
-                +regular(1.6rem,$dark,500) 
+                +regular(16,10,$dark,500) 
                 overflow: hidden
                 &__title
                     &::after
@@ -170,11 +176,10 @@
                     &:first-of-type
                         margin-top: 20px 
                 &__link
-                    +regular(1.4rem,$dark) 
-                    
+                    +regular(14,10,$dark)                     
             &-full
                 display: inline-block
-                +regular(1.4rem,$dark)
+                +regular(14,10,$dark)
                 background: #ECECEC
                 padding: 5px 18px
                 border-radius: 20px
@@ -250,14 +255,14 @@
             &__title
                 display: block
                 margin-bottom: 24px
-                +regular(24px,#d3d3d3,600)
+                +regular(24,24,#d3d3d3,600)
                 @media ( max-width: $md )
                     margin-left: 30px
                     padding-top: 15px
             &__link
                 display: inline-block
                 margin-bottom:  30px
-                +regular(14px,$dark,500)
+                +regular(14,12,$dark,500)
             &-close
                 span
                     background-color: #ffffff  
@@ -328,15 +333,18 @@
             &__link
                 display: inline-block
                 margin-bottom:  30px
-                +regular(14px,$dark,500)          
+                +regular(14,14,$dark,500)          
     &-mobile
         background-color: $company-color
         position: fixed
         top: 188px
         left: 0
         right: 0
+        z-index: 1000
         @media ( min-width: $md )
             display: none
+        @media ( max-width: 330px )
+            top: 150px
         &-navigation    
             display: flex
             list-style: none
@@ -349,7 +357,7 @@
                 justify-content: space-between
                 align-items: center
                 &__text 
-                    +regular(10px,#ffffff,500)
+                    +regular(10,10,#ffffff,500)
                 svg
                     fill: white
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))

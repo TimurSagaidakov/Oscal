@@ -27,18 +27,23 @@
 	font-style: normal;
 }
 
-@mixin title {
+@mixin title ($pcSize, $mobSize, $color:null, $weight:normal){
 	font-family: 'Constantia' , 'Montserrat';
-    font-weight: normal;
     font-style: normal;
-    font-size: 3.6rem;
+	$maxWidth: $maxWidth - 320;
+	$addSize: $pcSize - $mobSize;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+	color: $color;
+    font-weight: $weight;
 }
-@mixin regular ($size:1.6rem, $color:null, $weight:normal){
+@mixin regular ($pcSize, $mobSize, $color:null, $weight:normal){
 	font-family: 'Montserrat';
     font-weight: $weight;
     font-style: normal;
-    color: $color;
-    font-size: $size;
+	color: $color;
+	$maxWidth: 1440;
+	$maxWidth: $maxWidth - 320;
+	$addSize: $pcSize - $mobSize;
+ 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
-
 

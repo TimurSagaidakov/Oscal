@@ -7,39 +7,70 @@
         background-size: contain
         background-color: #F1F1F1
         position: relative
+        max-height: 575px 
+        padding: 0 2%
+        @media ( max-width: $md)
+            background-position: 300px bottom 
+        @media ( max-width: $sm)
+            background-position: 200px bottom 
+            background-size: cover
+            max-height: 400px
+        @media ( max-width: $xs)
+            max-height: 300px
+        &-wrapper
+            background-color: #f1f1f1
         &__bg
             background-image: url('../img/banner-master-1.png')
             background-repeat: no-repeat
-            background-position: center bottom
+            background-position: center 
+            background-size: contain
             position: absolute
+            margin-top: 10px
             top: 0
             bottom: 0
             right: 0
             left: 0
+            @media ( max-width: $md )
+                background-position: bottom right
+            @media ( max-width: $sm )
+                background-size: 50%
         &__title
-            +regular(2.4rem,#000000,bold)
+            +regular(24,14,#000000,bold)
             text-transform: uppercase
-            padding: 4rem 0
+            padding: 40px 0
+            position: relative
+            z-index: 3
+            @media ( max-width: $md )
+                width: 30%
         &__subtitle
-            +regular(2.4rem,$dark,500)
+            +regular(24,12,$dark,500)
+            position: relative
+            z-index: 3
+            
         &__text
-            +regular(1.8rem,$dark,500)
-            margin-bottom: 7rem
+            +regular(18,10,$dark,500)
+            margin-bottom: 70px
+            position: relative
+            z-index: 3
         &__button
             @extend .button
             text-transform: uppercase
-            +regular(1.4rem,#ffffff,500)
+            +regular(14,12,#ffffff,500)
             background: $company-color
-            margin-bottom: 25rem
+            margin-bottom: 250px
             position: relative
             z-index: 3
             &:hover
                 background-color: darken($company-color, 5%)
+            @media ( max-width: $sm)
+                margin-bottom: 110px
         &-popup
             display: flex
             align-items: flex-end
             justify-content: space-between
             position: relative
+            @media ( max-width: $md )
+                display: none
             &-item
                 flex-basis: 30%
                 background-color: #fff
@@ -50,7 +81,7 @@
                 left: 0
                 width: 30%
                 z-index: 2
-                padding: 1.5rem 5rem
+                padding: 10px 30px
                 overflow: hidden
                 transition: 0.2s
                 &:nth-child(2)
@@ -61,18 +92,162 @@
                     display: flex
                     align-items: center
                 &__text
-                    +regular(1.4rem,$dark,bold)
+                    +regular(14,10,$dark,bold)
                     text-transform: uppercase
                     cursor: default
                     margin-left: 15px
                 &__hide
-                    +regular(1.3rem,#000514,500)
-                    padding-top: 2rem
+                    +regular(13,8,#000514,500)
+                    padding-top: 2.5rem
                     line-height: 3rem
                     cursor: default
                 &:hover
-                    top: -165px
+                    top: -200px
                     height: 200px
-                &:hover .banner-first-popup-item__text
-                        color: $company-color
-                        font-size: 2.5rem
+                &:hover .banner-first-popup-item__text 
+                        +regular(20,10,$company-color,bold)
+    &-second
+        display: flex
+        min-height: 575px  
+        background-image: url('../img/banner-second.png') 
+        background-repeat: no-repeat
+        background-size: cover 
+        @media ( max-width: $md)
+            flex-direction: column
+        @media ( max-width: $sm)
+            min-height: 400px
+        @media ( max-width: $xs)
+            min-height: 300px
+        &-wrapper   
+            background-color: #f1f1f1
+        &-sale
+            display: flex
+            flex-basis: 50%
+            align-items: flex-start
+            justify-content: flex-start
+            &__text
+                +regular(18,10,#ffffff,500)
+                padding: 10px 20px
+                background-color: rgba($company-color,0.8)
+                border-radius: 0px 0px 25px 0px
+        &-key
+            flex-basis: 50%
+            background-repeat: no-repeat
+            background-size: cover
+            text-align: center
+            &__title
+                +regular(36,25,#000000,600)
+                margin: 40px 0 100px 80px
+                width: 430px
+                @media ( max-width: $md)
+                    text-align: center
+                    width: auto
+                    margin: 150px 10px 50px   
+                    text-shadow: 0 0 10px  #ffffff 
+                @media ( max-width: $sm)
+                    margin-top: 60px
+            &__button
+                @extend .button
+                padding: 15px 30px
+                background: $company-color 
+                margin-left: 80px
+                text-transform: uppercase
+                &:hover
+                    background-color: darken($company-color, 5%)
+                @media ( max-width: $md)
+                    margin-left: 0
+    &-third
+        display: flex
+        background-image: url('../img/banner-third.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        min-height: 575px
+        @media ( max-width: $md)
+            flex-direction: column
+            background-position: right 
+        @media ( max-width: $sm)
+            min-height: 400px
+        @media ( max-width: $xs)
+            min-height: 300px
+        &-wrapper
+            background-color: #f1f1f1
+        &-sale
+            flex-basis: 45%
+            position: relative
+            z-index: 2
+            @extend .banner-second-sale
+            &-text
+                @extend .banner-second-sale__text
+                display: flex
+                align-items: center
+                &__number
+                    +regular(36,25,#ffffff,600)
+                &__span
+                    +regular(24,15,#ffffff,500)
+                    text-transform: uppercase
+                    margin-left: 10px
+        &-house
+            position: relative
+            z-index: 2
+            @media ( max-width: $md)
+                text-align: center
+            &__title
+                +regular(36,25,#000000,600)
+                text-transform: uppercase
+                margin: 50px 0 50px 90px
+                @media ( max-width: $md)
+                    margin: 50px 10px
+                    text-shadow: 0 0 10px #ffffff
+            &__order
+                +regular(18,12,$dark,500)
+                text-transform: uppercase
+                margin-left: 90px
+                line-height: 50px
+                @media ( max-width: $md)
+                    margin: 0 10px
+                    text-shadow: 0 0 10px #ffffff
+            &__button
+                @extend .banner-second-key__button
+                margin-top: 100px
+                margin-bottom: 20px
+    &-fourth
+        background-image: url('../img/banner-fourth.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        @media ( max-width:  $md)
+            background-position: -200px           
+        &-wrapper
+            background-color: #f1f1f1
+            position: relative
+        &-sale
+            flex-basis: 50%
+    &-fifth
+        background-image: url('../img/banner-fifth.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        @media ( max-width:  $md)
+            background-position: -100px           
+        &-wrapper
+            background-color: #f1f1f1
+            position: relative
+        &-sale
+            flex-basis: 50%
+        &-house
+            flex-basis: 50%
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(255,255,255,0.7)
+        @media ( min-width: $md + 1px )
+            display: none
+            
+
+            
+            
