@@ -34,3 +34,16 @@ function menuMobileOpen(){
     document.querySelector('.header-navigation-services').classList.remove('services-open');
 };
 
+$('.banner-wrapper').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.banner-arrow__prev'),
+    nextArrow: $('.banner-arrow__next'),
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 4000,   
+    fade: true,
+    pauseOnHover: true
+});
+
