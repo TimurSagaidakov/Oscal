@@ -5,6 +5,8 @@
     right: 0
     z-index: 100
     background-color: #fff
+    @media ( max-width: $md )
+        position: static
     &-text
         &-wrapper
             box-shadow: 0px 0px 50px #EBF0FA
@@ -68,7 +70,7 @@
         +regular(16,10,rgba(0,5,20,0.8), 500)
         position: relative
         @media ( max-width: $md )
-            position: absolute
+            position: fixed
             top: -555px
             left: 0
             right: 0
@@ -346,14 +348,14 @@
                 +regular(14,14,$dark,500)          
     &-mobile
         background-color: $company-color
-        position: fixed
-        top: 188px
-        left: 0
-        right: 0
-        z-index: 1000
         transition: 0.5s
-        &.isShown
+        border-radius: 0 0 5% 5%
+        &.fixed
+            position: fixed
             top: 0
+            left: 0
+            right: 0
+            z-index: 1000
         @media ( min-width: $md )
             display: none
         @media ( max-width: 330px )
