@@ -24,7 +24,11 @@ function closeBuyer(){
     }  
     document.querySelector('.header-navigation-buyer').classList.remove('buyer-open');
 }
+const fixedBar = document.querySelector('.header-mobile');
 function menuMobileOpen(){
+    if(fixedBar.classList.contains('isShown')){
+        document.querySelector('.header-navigation').classList.toggle('open-scroll');
+    }
     document.querySelector('.header-navigation').classList.toggle('open');
     document.querySelector('.button-mobile').classList.toggle('close');
     let mobilePoint = document.querySelectorAll('.header-navigation-li')
@@ -32,18 +36,50 @@ function menuMobileOpen(){
         mobilePoint[i].classList.toggle('move');
     document.querySelector('.header-navigation-buyer').classList.remove('buyer-open');
     document.querySelector('.header-navigation-services').classList.remove('services-open');
+    document.querySelector('body').classList.toggle('lock')
 };
 
+
+const toggleBar = function () {
+  let isShown = window.pageYOffset > window.innerHeight / 15;
+  fixedBar.classList.toggle('isShown', isShown);
+  document.querySelector('.header-top').classList.toggle('delete', isShown);
+  document.querySelector('.header-text-wrapper').classList.toggle('delete', isShown);
+  document.querySelector('.main').classList.toggle('elevate', isShown);
+
+}
+toggleBar();
+window.addEventListener('scroll', toggleBar);
 $('.banner-wrapper').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: $('.banner-arrow__prev'),
-    nextArrow: $('.banner-arrow__next'),
     speed: 1000,
     //autoplay: true,
-    autoplaySpeed: 4000,   
+    autoplaySpeed: 3500,   
     fade: true,
-    pauseOnHover: true
+    arrows: false
+});
+$('.turnkey-slider').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: $('.turnkey-arrow__prev'),
+    nextArrow: $('.turnkey-arrow__next'),
+    responsive:[
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                arrow: false
+            },
+        },
+        {
+            breakpoint: 576,
+            settings:{
+                slidesToShow: 2
+            }           
+        }
+    ]
 });
 

@@ -1,0 +1,79 @@
+.turnkey
+  margin-top: 160px
+  @media ( max-width: $md )
+    margin-top: 100px
+  @media ( max-width: $md )
+    margin-top: 50px
+  &__title  
+    @extend .title
+  &-block
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5)
+    padding: 40px 0
+    position: relative
+  &-slider
+  &-card
+    width: 165px
+    overflow: hidden
+    position: relative
+    margin: 0 23px
+    img
+      width: 100%
+    &:hover .turnkey-card-hide
+      opacity: 1
+      bottom: 0
+    &-hide
+      position: absolute
+      bottom: -50%
+      left: 0
+      right: 0
+      opacity: 0
+      text-align: center
+      background-color: #fff
+      transition: 0.5s
+      &__title
+        +roboto(14,11,rgba(0,0,0,0.8),500)
+        margin-top: 10px
+      &__class
+        +roboto(14,11,rgba(0,0,0,0.8),600)
+        text-transform: uppercase
+        margin-bottom: 10px
+      &__price
+        +roboto(18,12,#324261)
+        margin-bottom: 10px
+      &__button
+        display: block
+        background: linear-gradient(180deg, #BE0202 0%, #FF0909 100%)
+        +roboto(18,12,#ffffff)
+        text-align: center
+        padding: 2px
+    &-no-hide
+      bottom: 0
+      opacity: 1
+  &-arrow
+    width: 97%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: flex
+    justify-content: space-between
+    &__prev
+      width: 34px
+      height: 34px
+      background-color: #fff
+      border: 1px solid #ECECEC
+      border-radius: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      &:hover
+        background-color: $company-color  
+        fill: #ffffff 
+        cursor: pointer
+    &__next
+      @extend .turnkey-arrow__prev
+      transform: rotate(180deg)
+
+
+
+      

@@ -26,20 +26,48 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+@font-face {
+	font-family: 'Roboto';
+	src: url('..//fonts/Roboto-Regular.eot');
+	src: url('..//fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+	url('..//fonts/Roboto-Regular.woff') format('woff'),
+	url('..//fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+	@font-face {
+		font-family: 'Roboto';
+		src: url('../fonts/Roboto-Medium.eot');
+		src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Medium.woff') format('woff'),
+		url('../fonts/Roboto-Medium.ttf') format('truetype');
+		font-weight: 500;
+		font-style: normal;
+		}
 @mixin title ($pcSize, $mobSize, $color:null, $weight:normal){
 	font-family: 'Constantia' , 'Montserrat';
-    font-style: normal;
+	font-style: normal;
+	$maxWidth: 1440;
 	$maxWidth: $maxWidth - 320;
 	$addSize: $pcSize - $mobSize;
 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 	color: $color;
-    font-weight: $weight;
+  font-weight: $weight;
 }
 @mixin regular ($pcSize, $mobSize, $color:null, $weight:normal){
-	font-family: 'Montserrat';
-    font-weight: $weight;
-    font-style: normal;
+	font-family: 'Roboto';
+  font-weight: $weight;
+  font-style: normal;
+	color: $color;
+	$maxWidth: 1440;
+	$maxWidth: $maxWidth - 320;
+	$addSize: $pcSize - $mobSize;
+ 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin roboto ($pcSize, $mobSize, $color:null, $weight:normal){
+	font-family: 'Roboto';
+  font-weight: $weight;
+  font-style: normal;
 	color: $color;
 	$maxWidth: 1440;
 	$maxWidth: $maxWidth - 320;
