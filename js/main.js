@@ -41,7 +41,7 @@ function menuMobileOpen(){
 
 
 const toggleBar = function () {
-  let isShown = window.pageYOffset > window.innerHeight / 100*15;
+  let isShown = window.scrollY > 0;
   fixedBar.classList.toggle('isShown', isShown);
   document.querySelector('.header-mobile').classList.toggle('fixed',isShown);
   document.querySelector('.header-top').classList.toggle('delete', isShown);
