@@ -41,13 +41,11 @@ function menuMobileOpen(){
 
 
 const toggleBar = function () {
-  let isShown = window.pageYOffset > window.innerHeight / 100*20;
+  let isShown = window.pageYOffset > window.innerHeight / 100*15;
   fixedBar.classList.toggle('isShown', isShown);
   document.querySelector('.header-mobile').classList.toggle('fixed',isShown);
   document.querySelector('.header-top').classList.toggle('delete', isShown);
   document.querySelector('.header-text-wrapper').classList.toggle('delete', isShown);
-  document.querySelector('.main').classList.toggle('elevate', isShown);
-
 }
 toggleBar();
 window.addEventListener('scroll', toggleBar);
@@ -83,4 +81,28 @@ $('.turnkey-slider').slick({
         }
     ]
 });
+
+$('.need-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    prevArrow: $('.need-arrow__prev'),
+    nextArrow: $('.need-arrow__next'),
+    responsive:[
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                arrow: false
+            },
+        },
+        {
+            breakpoint: 576,
+            settings:{
+                slidesToShow: 2
+            }           
+        }
+    ]
+});
+
 

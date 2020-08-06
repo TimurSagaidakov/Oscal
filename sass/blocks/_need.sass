@@ -1,0 +1,65 @@
+.need
+  position: relative
+  &__title
+    @extend .title
+    margin-bottom: 50px
+  &-card
+    width: 300px !important  
+    text-align: center
+    position: relative
+    padding-top: 60px
+    margin: 0 20px
+    &:hover img
+      transform: translateY(-50px)
+    img
+      display: inline !important
+      transition: 0.3s
+    &-description
+      background-color: #fff
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      border-top: 1px solid rgba(0,0,0,0.2)
+      border-radius: 15px 15px 0 0 
+      &__title
+        padding-top: 10px
+        +regular(18,12,#1d1d1d,500)
+        text-transform: uppercase
+      &__price
+        +regular(19,13,#324261)
+        margin: 15px 0
+      &__link
+        +regular(18,12,$company-color)
+        border: 2px solid $company-color
+        padding: 6px 30px
+        transition: 0.2s
+        &:hover
+          background-color: $company-color
+          color: #ffffff
+  &-arrow
+    width: 97%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: flex
+    justify-content: space-between
+    &__prev
+      width: 40px
+      height: 40px
+      background-color: #fff
+      border-radius: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      fill: #2C2C2C
+      &:hover
+        background-color: $company-color  
+        fill: #ffffff 
+        cursor: pointer
+    &__next
+      @extend .need-arrow__prev
+      transform: rotate(180deg)        
+          
+
