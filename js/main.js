@@ -83,11 +83,18 @@ $('.turnkey-slider').slick({
 
 $('.need-slider').slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 2,
     prevArrow: $('.need-arrow__prev'),
     nextArrow: $('.need-arrow__next'),
     responsive:[
+        {
+            breakpoint: 996,
+            settings: {
+                slidesToShow: 3,
+                autoplay: true,
+            },
+        },
         {
             breakpoint: 576,
             settings: {

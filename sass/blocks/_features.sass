@@ -1,0 +1,183 @@
+.features
+  &__title
+    @extend .title
+  &__subtitle
+    @extend .title
+  &-block
+    margin-top: 40px
+    &-item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 80px
+      @media ( max-width: $md )
+        justify-content: start
+        flex-wrap: wrap
+        margin-bottom: 49px
+      @media ( max-width: $sm )
+        margin-bottom: 30px
+      &__upper
+        flex: 0 0 32%
+        +regular(22,20,#324261,bold)
+        text-transform: uppercase        
+        transform: translateX(50px)
+        @media ( max-width: $md )
+          flex: 0 0 79%
+          order: 1 
+        @media ( max-width: $sm )
+          flex: 0 0 61%
+          margin-bottom: 10px
+        span
+          display: block
+          max-width: 290px
+          @media ( max-width: $md )
+            max-width: 100%
+            margin-left: 49px
+          @media ( max-width: $sm )
+            margin-left: 20px
+      &-number
+        flex: 0 0 20%
+        display: flex
+        align-items: center
+        justify-content: center
+        @media ( max-width: $md )
+          order: 0
+          flex: 0 0 80px
+        @media ( max-width: $sm )
+          flex: 0 0 40px
+        &__text
+          width: 68px
+          height: 68px
+          background-color: $company-color
+          border-radius: 50%
+          +regular(36,25,#ffffff)
+          display: flex
+          align-items: center
+          justify-content: center
+          position: relative 
+          @media ( max-width: $md )
+            width: 48px
+            height: 48px
+          &::before
+            content: ''
+            position: absolute
+            top: 32px
+            left: -194px
+            width: 195px
+            height: 1px
+            display: block
+            background-color: $company-color
+            @media ( max-width: 1100px )
+              width: 100px
+              left: -90px
+            @media ( max-width: $md )
+                top: 24px
+                left: 47px
+            @media ( max-width: $sm )
+              width: 50px
+          &::after
+            content: ''
+            width: 1px
+            height: 95px
+            display: block
+            background-color: $company-color
+            position: absolute
+            top: 98%
+            left: 50%
+          &-2
+            width: 68px
+            height: 68px
+            background-color: $company-color
+            border-radius: 50%
+            +regular(36,25,#ffffff)
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            @media ( max-width: $md )
+              width: 48px
+              height: 48px
+            &::before
+              content: ''
+              position: absolute
+              top: 32px
+              right: -192px
+              width: 195px
+              height: 1px
+              display: block
+              background-color: $company-color
+              @media ( max-width: 1100px )
+                width: 100px
+                left: 65px
+              @media ( max-width: $md )
+                top: 24px
+                left: 47px
+              @media ( max-width: $sm )
+                width: 50px
+            &::after
+              content: ''
+              width: 1px
+              height: 95px
+              display: block
+              background-color: $company-color
+              position: absolute
+              top: 98%
+              left: 50%
+          &-4
+            width: 68px
+            height: 68px
+            background-color: $company-color
+            border-radius: 50%
+            +regular(36,25,#ffffff)
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            @media ( max-width: $md )
+              width: 48px
+              height: 48px
+            &::before
+              content: ''
+              position: absolute
+              top: 32px
+              right: -192px
+              width: 195px
+              height: 1px
+              display: block
+              background-color: $company-color
+              @media ( max-width: 1100px )
+                width: 100px
+                left: 65px
+              @media ( max-width: $md )
+                top: 24px
+                left: 47px
+              @media ( max-width: $sm )
+                width: 50px
+      &__lower
+        flex: 0 0 32%
+        @media ( max-width: $md )
+          order: 2
+          flex: 0 0 60%
+          margin-left: 179px
+        @media ( max-width: $sm )
+          margin-left: 118px
+        span
+          +regular(16,12,$dark)
+          transform: translateX(-100px)
+          max-width: 320px
+          display: block
+          @media ( max-width: 1100px )
+            transform: translateX(-70px)
+          @media ( max-width: $md )
+            max-width: 500px
+            transform: translateX(0px)
+        &-2
+          span
+            transform: translateX(100px)
+            text-align: right
+            @media ( max-width: 1100px )
+              transform: translateX(70px)
+            @media ( max-width: $md )
+              max-width: 500px
+              transform: translateX(0px)
+              text-align: left
