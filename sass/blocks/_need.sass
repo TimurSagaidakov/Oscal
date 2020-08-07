@@ -4,14 +4,14 @@
     @extend .title
     margin-bottom: 50px
   &-card
-    width: 300px !important  
     text-align: center
     position: relative
-    padding-top: 60px
-    margin: 0 20px
+    padding: 60px 20px 0 20px
+    margin: 0 10px
     &:hover img
       transform: translateY(-50px)
     img
+      width: 100%
       display: inline !important
       transition: 0.3s
     &-description
@@ -34,13 +34,15 @@
         border: 2px solid $company-color
         padding: 6px 30px
         transition: 0.2s
+        @media ( max-width: $md )       
+          padding: 6px 15px
         &:hover
           background-color: $company-color
           color: #ffffff
   &-arrow
     width: 97%
     position: absolute
-    top: 50%
+    top: 57%
     left: 50%
     transform: translate(-50%,-50%)
     display: flex
