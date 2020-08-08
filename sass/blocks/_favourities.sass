@@ -1,0 +1,67 @@
+.favourities
+  position: relative
+  &__title
+    +title(36,22,#000000)
+    line-height: 60px
+    max-width: 53%
+    margin-bottom: 80px
+    @media ( max-width: $md )
+      max-width: 90%
+      text-align: center
+      line-height: 30px
+      margin: 0 auto 20px
+  &-card
+    padding: 0 20px
+    &__img
+      position: relative
+    &__scale
+      background: rgba(255, 255, 255, 0.5)
+      border-radius: 10px 0px 0px 0px
+      position: absolute
+      top: 0
+      left: 0
+      fill-opacity: 0.2
+      &:hover
+        fill-opacity: 1      
+    img
+      width: 100%
+    &-description
+      background: #FFFFFF
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+      border-radius: 10px
+      text-align: center
+      position: relative
+      &__title
+        +regular(22,16,$dark)
+        text-transform: uppercase
+        padding-top: 20px
+      &__date
+        +regular(14,12,#000000)
+        margin: 30px 0 40px 0
+      &__button
+        +regular(16,12,$company-color)
+        padding: 8px 24px
+        border: 1px solid #BE0202
+        border-radius: 30px
+        transition: 0.5s
+        &:hover
+          background-color: $company-color
+          color: #ffffff
+        &::before
+          content: ''
+          width: 165px
+          height: 1px
+          background: #ECECEC
+          display: block
+          position: absolute
+          top: 105px
+          left: 0
+        &::after
+          content: ''
+          width: 165px
+          height: 1px
+          background: #ECECEC
+          display: block
+          position: absolute
+          top: 115px
+          right: 0

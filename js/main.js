@@ -49,6 +49,13 @@ const toggleBar = function () {
 }
 toggleBar();
 window.addEventListener('scroll', toggleBar);
+
+
+
+
+    
+    
+
 $('.banner-wrapper').slick({
     infinite: true,
     slidesToShow: 1,
@@ -110,5 +117,51 @@ $('.need-slider').slick({
         },
     ]
 });
+$('.favourities-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    prevArrow: $('#favourities-arrow__prev'),
+    nextArrow: $('#favourities-arrow__next'),
+    responsive:[
+        {
+            breakpoint: 996,
+            settings: {
+                slidesToShow: 3,
+                autoplay: true,
+            },
+        },
+        {
+            breakpoint: 670,
+            settings: {
+                slidesToShow: 2,
+                autoplay: true,
+            },
+        },
+        {
+            breakpoint: 400,
+            settings:{
+                slidesToShow: 1
+            }           
+        },
+    ]
+});
+    
+    const popupClose = function(){
+        document.querySelector('.popup').classList.remove('show');
+    }
+    const popupShow = (
+        function(){
+            document.querySelector('.popup').classList.add('show');
+            }
+        );
+    const popupFinish = function(){
+        let popupName = document.querySelector('.popup__input').value,
+        popupPhone = document.querySelector('.popup-input__phone').value;
+        document.querySelector('.popup-show').classList.add('delete');
+        document.querySelector('.popup-hide').classList.add('display');
+        document.querySelector('.popup-hide__phone').innerHTML = popupPhone;
+        document.querySelector('.popup-hide__name').innerHTML = popupName;
+    }
 
 

@@ -9,7 +9,7 @@
       display: flex
       align-items: center
       justify-content: space-between
-      margin-bottom: 80px
+      margin-bottom: 70px
       @media ( max-width: $md )
         justify-content: start
         flex-wrap: wrap
@@ -18,15 +18,14 @@
         margin-bottom: 30px
       &__upper
         flex: 0 0 32%
-        +regular(22,20,#324261,bold)
+        +regular(22,12,#324261,bold)
         text-transform: uppercase        
-        transform: translateX(50px)
         @media ( max-width: $md )
+          transform: translateX(50px)
           flex: 0 0 79%
           order: 1 
         @media ( max-width: $sm )
           flex: 0 0 61%
-          margin-bottom: 10px
         span
           display: block
           max-width: 290px
@@ -162,7 +161,7 @@
         @media ( max-width: $sm )
           margin-left: 118px
         span
-          +regular(16,12,$dark)
+          +regular(16,10,$dark)
           transform: translateX(-100px)
           max-width: 320px
           display: block

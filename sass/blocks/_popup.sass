@@ -1,0 +1,131 @@
+.popup
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  background-color: rgba(0,0,0,0.7)
+  opacity: 0
+  z-index: -5
+  transition: 0.2s
+  &-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 1000px
+    background-color: #fff
+    border-radius: 20px
+    @media ( max-width: 1060px )
+      width: 750px
+    @media ( max-width: $md )
+      width: 500px
+    @media ( max-width: $sm )
+      width: 315px
+  &-wrapper
+    margin-right: 30px
+    margin-top: 30px
+    background-image: url('../img/popup-bg.png')
+    background-repeat: no-repeat
+    background-position: right bottom
+    background-size: contain
+    padding: 37px
+    margin-bottom: -1px
+    @media ( max-width: $md )
+      background-size: 35%
+      padding: 15px
+      margin: 0
+    @media ( max-width: $md )
+      background-image: none
+  &__title
+    +regular(48,25,rgba(0,0,0,0.5),500)
+  &__contact
+    +regular(14,12,#000000)
+    padding-top: 10px
+  &-input
+    position: relative
+    overflow: hidden   
+    margin-top: 50px
+    margin-bottom: 10px
+    &__placeholder
+      position: absolute
+      top: 14px
+      left: 15px
+      z-index: 
+      +regular(14,12,rgba(44,44,44,0.5),500)
+      transition: 0.5s
+    &__phone
+      @extend .popup__input
+      margin-bottom: 70px
+  &__input
+    display: block
+    position: relative
+    z-index: 2
+    max-width: 40%
+    width: 100%
+    +regular(14,12,rgba(44,44,44,0.5),500)
+    padding: 15px 24px
+    border: none
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1)
+    background-color: transparent
+    &:focus + .popup-input__placeholder
+      top: -50px
+    &:valid + .popup-input__placeholder
+      top: -50px 
+    @media ( max-width: 1080px )
+      max-width: 350px
+  &-button
+    display: flex
+    justify-content: space-between 
+    max-width: 420px
+    @media ( max-width: 1080px )
+      max-width: 350px
+  &__submit
+    @extend .button    
+  &__reset
+    @extend .button
+    border: none
+    background-image: none
+    background-color: #ECECEC
+    color: #000000
+    &:hover
+      color: #ffffff
+  &-personal
+    margin-top: 26px
+    &__label
+      display: flex
+      align-items: center
+      +regular(12,9,rgba(0,0,0,0.5))
+    &__checkbox
+      width: 16px
+      height: 16px
+      background: #FFFFFF
+      box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25)
+      border-radius: 2px
+      margin-right: 10px
+  &__close
+    position: absolute
+    top: 6px
+    right: 6px
+    &:hover
+      cursor: pointer
+  &-hide
+    height: 100%
+    display: none
+    &__name
+      +regular(24,18,rgba(50,66,97,0.6),500)
+      margin-top: 70px
+    &__phone
+      @extend .popup-hide__name
+      margin-top: 15px
+      margin-bottom: 130px
+    &__thanks
+      +regular(36,28,#e9e9e9,500)
+      margin-bottom: 20px
+    &__company
+      display: inline-block
+      +regular(14,10,#ffffff)
+      padding: 5px 34px
+      background-color: $company-color
+      border-radius: 0px 20px 0px 0px 
