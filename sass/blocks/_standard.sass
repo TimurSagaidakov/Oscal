@@ -1,0 +1,109 @@
+.standard
+  position: relative
+  &__title
+    +title(36,22,#000000,normal)
+    text-transform: uppercase
+  &__subtitle
+    +title(32,18,#000000,normal)
+    text-transform: uppercase
+    margin-bottom: 50px
+  &__description
+    +regular(16,12,$dark,normal)
+    width: 80%
+    @media ( max-width: $md )
+      width: 100%
+  &::before
+    content: ''
+    width: 55%
+    height: 1px
+    display: block
+    position: absolute
+    top: 240px
+    left: 0
+    background: #ECECEC
+  &::after
+    content: ''
+    width: 55%
+    height: 1px
+    display: block
+    position: absolute
+    top: 236px
+    right: 0
+    background: #ECECEC
+  &-block
+    margin-top: 70px
+    display: flex
+    justify-content: space-between
+    @media ( max-width: $xl )
+      flex-wrap: wrap
+    @media ( max-width: $sm )
+        display: block
+    &-item
+      flex: 0 0 22%
+      background: #FFFFFF
+      border: 4px solid #ECECEC
+      box-sizing: border-box
+      border-radius: 15px 
+      transition: 0.2s 
+      &:hover
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+        transform: scale(1.005)
+      @media ( max-width: $xl )
+        flex: 0 0 49%
+        margin-bottom: 30px
+      @media ( max-width: $sm )
+        background-image: url('../img/standard-mobile-1.png')
+        background-repeat: no-repeat
+        background-size: 100%
+        &:nth-child(2)
+          background-image: url('../img/standard-mobile-2.png')
+        &:nth-child(3)
+          background-image: url('../img/standard-mobile-3.png')    
+        &:nth-child(4)
+          background-image: url('../img/standard-mobile-4.png')              
+      &__img
+        @media ( max-width: $sm )
+          display: none
+        img
+          width: 100%
+      &__title
+        +regular(16,12,$dark,500)
+        margin-top: 20px
+        text-align: center
+        padding: 0 10px
+        position: relative
+        &::before
+          content: ''
+          width: 70%
+          height: 1px
+          display: block
+          position: absolute
+          top: 50px
+          left: 0
+          background: #ECECEC
+          @media ( max-width: $xl )
+            top: 35px
+          @media ( max-width: $sm )
+            background-color: $company-color  
+        &::after
+          content: ''
+          width: 70%
+          height: 1px
+          display: block
+          position: absolute
+          top: 55px
+          right: 0
+          background: #ECECEC
+          @media ( max-width: $xl )
+            top: 40px
+          @media ( max-width: $sm )
+            background-color: $company-color  
+      &__description
+        margin-top: 30px
+        padding: 0 20px
+        +regular(14,10,#324261,normal) 
+        line-height: 30px 
+      span
+        display: block 
+        @media ( max-width: $xl )
+          display: inline

@@ -99,7 +99,7 @@ $('.need-slider').slick({
             breakpoint: 996,
             settings: {
                 slidesToShow: 3,
-                //autoplay: true,
+                autoplay: true,
             },
         },
         {

@@ -1,0 +1,104 @@
+.request
+  &-block
+    background-image: url('../img/footer-request.png')
+    background-repeat: no-repeat
+    background-position: left 70px
+    background-size: contain
+    display: flex
+    justify-content: flex-end
+  &__title
+    +regular(18,12,$dark,500) 
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 2px
+      background: linear-gradient(to right,$company-color 20%,#324261 20%)
+      margin-top: 20px
+  &__subtitle
+    +regular(14,10,#686868,normal) 
+    line-height: 30px
+    width: 50%
+    margin-top: 20px
+    margin-bottom: 70px 
+  &-contacts
+    display: flex
+    justify-content: space-between
+    margin-bottom: 50px
+    &__phone
+      flex: 0 0 45%
+      border: 1px solid rgba(0,0,0,0.25)
+      +regular(14,10,rgba(44,44,44,0.4),500)
+      padding: 15px
+  &-input
+    flex: 0 0 45%
+    position: relative
+    +regular(14,10,rgba(44,44,44,0.5),500)
+    overflow: hidden
+    &__placeholder
+      position: absolute
+      top: 15px
+      left: 15px
+      transition: 0.5s
+      z-index: -1
+  &__input
+    border: 1px solid rgba(0,0,0,0.25)
+    width: 100%
+    padding: 15px
+    +regular(14,10,rgba(44,44,44,0.5),500)
+    background-color: transparent
+    &:focus + .request-input__placeholder
+      top: -50px
+    &:valid + .request-input__placeholder
+      top: -50px 
+  &-textarea
+    position: relative
+    +regular(14,10,rgba(44,44,44,0.5),500)
+    overflow: hidden
+    &__input
+      width: 100%
+      border: 1px solid rgba(0,0,0,0.25)
+      resize: none
+      height: 200px
+      background-color: transparent
+      +regular(14,10,rgba(44,44,44,0.5),500)
+      padding: 10px
+      &:focus + .request-textarea__placeholder
+        top: -50px
+      &:valid + .request-textarea__placeholder
+        top: -50px 
+    &__placeholder
+      position: absolute
+      z-index: -1
+      top: 15px
+      left: 15px
+      transition: 0.5s
+  &-necessarily
+    display: block
+    +regular(10,8,#000000,500)
+    margin: 20px 0
+  &-button
+    padding-bottom: 90px
+    &__submit
+      @extend .button
+    &__reset
+      @extend .button
+      background: linear-gradient(90deg, #324261 0%, #07090E 100%)
+      border: none
+      margin-left: 28px
+      &:hover
+        background: linear-gradient(90deg, #10203f 0%, #07090E 100%)
+  &-callback
+    width: 100%
+    background-color: #cecece
+    padding: 20px
+    text-align: center
+    &__big
+      +regular(18,10,#000000,500)
+      margin-right: 20px
+    &__small
+      +regular(12,7,#000000,500)
+
+
+
+
