@@ -6,8 +6,18 @@
     background-size: contain
     display: flex
     justify-content: flex-end
+    @media ( max-width: $lg )
+      background-size: 50%
+      background-position: left 250px
+    @media ( max-width: $md )
+      background: none
+      justify-content: center
+  &-left
+    position: relative
+    z-index: 3
   &__title
     +regular(18,12,$dark,500) 
+    text-transform: uppercase
     &::after
       content: ''
       display: block
@@ -21,15 +31,24 @@
     width: 50%
     margin-top: 20px
     margin-bottom: 70px 
+    @media ( max-width: $md )
+      width: 100%
+      margin-bottom: 30px
   &-contacts
     display: flex
     justify-content: space-between
     margin-bottom: 50px
+    position: relative
+    @media ( max-width: $md )
+      display: block
     &__phone
       flex: 0 0 45%
+      width: 100%
       border: 1px solid rgba(0,0,0,0.25)
       +regular(14,10,rgba(44,44,44,0.4),500)
       padding: 15px
+      @media ( max-width: $md )
+        margin-top: 50px
   &-input
     flex: 0 0 45%
     position: relative
@@ -79,6 +98,8 @@
     margin: 20px 0
   &-button
     padding-bottom: 90px
+    @media ( max-width: $md )
+      padding-bottom: 30px
     &__submit
       @extend .button
     &__reset
@@ -98,6 +119,34 @@
       margin-right: 20px
     &__small
       +regular(12,7,#000000,500)
+  &-hide
+    display: none
+    @media ( max-width: $md )
+      width: 100%
+    &__name
+      +regular(24,18,#2c2c2c,500)
+      display: block
+      margin: 20px 0
+    &__phone
+      @extend .request-hide__name
+    &-footer
+      margin-top: 400px
+      @media ( max-width: $md )
+        margin-top: 50px
+      &__thanks
+        +regular(18,12,#000000,bold)
+        @media ( max-width: $md )
+          display: block
+          margin-bottom: 30px
+      &__company
+        +regular(24,14,#ffffff,bold)
+        padding: 15px 20px
+        background: $company-color
+        border-radius: 30px 0px 0px 0px
+        @media ( max-width: $md )
+          border-radius: 30px
+
+
 
 
 

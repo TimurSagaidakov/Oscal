@@ -157,4 +157,17 @@ $('.favourities-slider').slick({
         document.querySelector('.popup-hide__name').innerHTML = popupName;
     }
 
+const requestSend = function(){
+    let requestName = document.querySelector('.request__input').value;
+    let requestPhone = document.querySelector('.request-contacts__phone').value;
+    if(requestName!= "" && requestPhone!= ""){
+        document.querySelector('.request-left').classList.add('delete');
+        document.querySelector('.request-callback').classList.add('delete');
+        document.querySelector('.request-hide').classList.add('display');
+        document.querySelector('.request-hide__phone').innerHTML = requestPhone;
+        document.querySelector('.request-hide__name').innerHTML = requestName;
+    }    
+}
+
+
 
