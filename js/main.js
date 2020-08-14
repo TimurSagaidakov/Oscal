@@ -99,21 +99,14 @@ $('.need-slider').slick({
             breakpoint: 996,
             settings: {
                 slidesToShow: 3,
-                autoplay: true,
+                //autoplay: true,
             },
         },
         {
             breakpoint: 576,
             settings: {
                 slidesToShow: 2,
-                autoplay: true,
             },
-        },
-        {
-            breakpoint: 330,
-            settings:{
-                slidesToShow: 1
-            }           
         },
     ]
 });

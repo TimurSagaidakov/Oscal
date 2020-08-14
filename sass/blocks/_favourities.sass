@@ -10,8 +10,15 @@
       text-align: center
       line-height: 30px
       margin: 0 auto 20px
+  &-slider
+    position: relative
+    z-index: 2    
   &-card
-    padding: 0 20px
+    margin: 20px
+    transition: 0.2s
+    border-radius: 15px
+    &:hover
+      box-shadow: 0 0 10px rgba(0,0,0, 0.5)
     &__img
       position: relative
     &__scale
@@ -31,13 +38,14 @@
       border-radius: 10px
       text-align: center
       position: relative
+      padding-bottom: 20px
       &__title
         +regular(22,16,$dark)
         text-transform: uppercase
         padding-top: 20px
       &__date
         +regular(14,12,#000000)
-        margin: 30px 0 40px 0
+        margin: 30px 0 50px 0
       &__button
         +regular(16,12,$company-color)
         padding: 8px 24px
