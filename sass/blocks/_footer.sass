@@ -39,9 +39,19 @@
         &:hover 
           &::before
             transform: rotate(-135deg) translate(-5px,5px)  
+      &__link
+        +regular(14,9,$dark,normal)
+        line-height: 40px
+        overflow: hidden        
+        position: relative
+        display: flex
+        align-items: center
+        &:hover
+          &::before
+            transform: rotate(-135deg) translate(-5px,5px) 
         &::before
           content: ''
-          display: block
+          display: inline-block
           margin-right: 10px
           width: 8px
           height: 8px
@@ -49,13 +59,6 @@
           border-left: 2px solid $company-color
           transform: rotate(-135deg)        
           transition: 0.2s
-      &__link
-        +regular(14,9,$dark,normal)
-        line-height: 40px
-        overflow: hidden        
-        position: relative
-        &:hover ~ .footer-menu-list li::before
-          border: none
   &-policy
     margin-top: 20px
     @media ( max-width: $md )

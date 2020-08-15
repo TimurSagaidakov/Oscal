@@ -1,0 +1,28 @@
+.doc-title
+  background-color: #f4f4f4
+  padding: 40px 0
+  &-wrapper
+    display: flex
+    justify-content: space-between    
+  &__text
+    +regular(18,13,#000000,bold)
+  &-crumb
+    display: flex
+    &__text
+      +regular(13,10,#2c2c2c,normal)
+      display: flex
+      align-items: center
+      &:hover
+        text-shadow: 0 0 1px rgba(0,0,0,0.5)
+      &::before
+        content: ''
+        display: block
+        width: 6px
+        height: 6px
+        border-bottom: 2px solid #2c2c2c
+        border-right: 2px solid #2c2c2c
+        transform: rotate(-45deg)
+        margin: 0 5px
+      &:first-child
+        &::before
+          display: none
