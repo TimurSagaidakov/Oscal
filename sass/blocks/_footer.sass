@@ -1,0 +1,115 @@
+.footer
+  margin-top: 20px
+  &-block
+    display: flex
+    width: 100%
+    justify-content: space-between
+    @media ( max-width: $md )
+      justify-content: center
+      background-color: #cecece
+  &-logo
+    flex: 0 0 17%
+    @media ( max-width: $lg )
+      display: none
+    img
+      width: 100%
+    &__name
+      +regular(12,8,$dark,normal)
+      text-align: center
+      line-height: 22px
+  &__title
+    +regular(18,12,$dark,bold)
+    margin-bottom: 20px
+    @media ( max-width: $md )
+      display: none
+  &-menu
+    flex: 0 0 40%
+    @media ( max-width: $lg )
+      flex: 0 0 49%
+    @media ( max-width: $md )
+      flex: 0 0 95%
+      &:last-child
+        display: none
+    &-list
+      list-style: none
+      column-count: 2
+      li
+        display: flex
+        align-items: center
+        &:hover 
+          &::before
+            transform: rotate(-135deg) translate(-5px,5px)  
+        &::before
+          content: ''
+          display: block
+          margin-right: 10px
+          width: 8px
+          height: 8px
+          border-bottom: 2px solid $company-color
+          border-left: 2px solid $company-color
+          transform: rotate(-135deg)        
+          transition: 0.2s
+      &__link
+        +regular(14,9,$dark,normal)
+        line-height: 40px
+        overflow: hidden        
+        position: relative
+        &:hover ~ .footer-menu-list li::before
+          border: none
+  &-policy
+    margin-top: 20px
+    @media ( max-width: $md )
+      margin-top: 0
+      border-top: 4px solid $company-color
+    &-top
+      background: linear-gradient(90deg, #324261 0%, #769CE8 100%)  
+      padding: 30px 0
+      @media ( max-width: $md )
+        padding: 20px 0 0 0
+      &-wrapper
+        display: flex
+        @media ( max-width: $md)
+          display: block
+      &__text
+        width: 70%
+        +regular(14,8,#ffffff,normal)
+        line-height: 20px
+        @media ( max-width: $md)
+          width: 100%
+          &::after
+            content: ''
+            display: block
+            background-color: #a6a6a6
+            width: 20%
+            height: 1px
+            margin-top: 20px
+      &-right
+        display: flex
+        align-items: center
+        &::before
+          content: ''
+          display: block
+          width: 1px
+          height: 100%
+          background-color: #fff
+          margin: 0 30px
+          @media ( max-width: $md )
+            display: none
+        &-links
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          line-height: 20px
+          height: 70%
+          @media ( max-width: $md )
+            line-height: 30px
+        &__link
+          display: block
+          +regular(14,8,#ffffff,500)
+    &-down
+      background: #324261
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)   
+      &__text
+        padding: 12px 0
+        +regular(12,7,#ffffff,bold)
+
