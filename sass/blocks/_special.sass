@@ -1,61 +1,113 @@
 .special
   background: #F4F4F4
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25)
-  padding: 15px 0 
-  &-wrapper
+  padding: 10px 0
+  &-block
     display: flex
     justify-content: space-between
-    @media ( max-width: $md )
-      display: none
-  &-first
+  &-item
     display: flex
     flex: 0 0 45%
-    justify-content: flex-end
     border: 10px solid #ECECEC
-    background-image: url('../img/special-1.png')
-    background-repeat: no-repeat
-    background-size: cover
-    &-right
-      margin: 75px 20px 30px 0
-      text-align: center
-      &__title
-        +regular(18,12,#000000,500)
-      &__button
-        @extend .button
-        background: #ffffff
-        color: #000000  
-        box-shadow: inset 0 0 2px rgba(0,0,0,0.7)        
-        margin-top: 20px
-  &-second
-    flex: 0 0 45%
-    background-image: url('../img/special-2.png')
-    background-repeat: no-repeat
-    background-size: cover
-    display: flex
-    justify-content: flex-end
-    align-items: center
-    border: 10px solid #ECECEC
-    &-right
-      margin: 75px 20px 30px 0
-      text-align: center
-      &__title
-        @extend .special-first-right__title
-      &__button
-        @extend .special-first-right__button
-  &-mobile
-    display: none
-    justify-content: space-between
-    text-align: center
-    @media ( max-width: $md )
-      display: flex
-    &-item
-      flex: 0 0 49% 
+    @media ( max-width: $lg )
+      flex-direction: column
+      @media ( max-width: $md )
+        flex: 0 0 49%
+    &__img
+      position: relative
+      flex: 0 0 55%
+      @media ( max-width: $md )
+        display: none
+      &::before
+        content: ''
+        display: inline-block
+        border: 20px solid transparent
+        border-right: 30px solid #ea2e25 
+        border-bottom: 15px solid #ea2e25 
+        position: absolute
+        right: 0
+        bottom: 0
+      @media ( max-width: $lg )
+        &::after
+          content: ''
+          display: inline-block
+          border: 20px solid transparent
+          border-left: 30px solid #ea2e25 
+          border-bottom: 15px solid #ea2e25 
+          position: absolute
+          left: 0
+          bottom: 0
+      &-2
+        padding: 15px
+        background-color: #fff
+        @media ( max-width: $lg )
+          padding: 0
+        &::before
+          content: ''
+          display: inline-block
+          border: 20px solid transparent
+          border-right: 30px solid #324261
+          border-bottom: 15px solid #324261
+          position: absolute
+          right: 0
+          bottom: 0
+        @media ( max-width: $lg )
+          &::after
+            content: ''
+            display: inline-block
+            border: 20px solid transparent
+            border-left: 30px solid #324261
+            border-bottom: 15px solid #324261
+            position: absolute
+            left: 0
+            bottom: 0
       img
-        width: 250px
-        @media ( max-width: $sm )
+        width: 100%
+      &-mobile
+        display: none
+        img
           width: 100%
-      &__title
-        +regular(14,14,#000000,500)
-        margin: 15px 0
+        @media ( max-width: $md )
+          display: block
+    &-right
+      flex: 0 0 45%
+      background-color: #ea2e25
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      @media ( max-width: $lg )
+        flex: 0 0 25%
+      @media ( max-width: $md )
+        background: none
+      &-2
+        background-color: #324261
+        @media ( max-width: $md )
+          background: none
+      &__text
+        +regular(18,12,#ffffff,500)
+        margin-bottom: 30px
+        @media ( max-width: $lg )
+          margin-top: 15px
+          margin-bottom: 15px
+        @media ( max-width: $md )
+          color: #000000
+          font-weight: bold
       &__button
-        @extend .button
+        background: #FFFFFF
+        border-radius: 20px
+        padding: 3px 26px
+        +regular(16,14,#000000,500)
+        @media ( max-width: $lg )
+          margin-bottom: 15px
+        @media ( max-width: $md )
+          background: linear-gradient(90deg, $company-color 0%, #FF0000 100%)
+          width: 90%
+          text-align: center
+          padding: 10px 0
+          color: #ffffff  
+          font-weight: bold
+        &:hover
+          background-color: $company-color
+          box-shadow: 0 0 5px rgba(0,0,0,0.5)
+          color: #ffffff

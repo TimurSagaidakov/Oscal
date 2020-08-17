@@ -1,0 +1,94 @@
+.search
+  background: rgba(50, 66, 97, 0.07)
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 20px 0
+  &__price
+    flex: 0 0 15%
+    +regular(14,14,rgba(44,44,44,0.5),500)
+    border: 1px solid #FFFFFF
+    border-radius: 5px  
+    padding: 10px 10px
+    background-color: transparent
+  &-range
+    position: relative
+    flex: 0 0 35%
+    &__min
+      position: absolute
+      z-index: 2
+      height: 18px
+      width: 100%
+      -webkit-appearance: none 
+      pointer-events: none
+      opacity: 0
+      &::-webkit-slider-thumb
+        pointer-events: all
+        width: 30px
+        height: 30px
+        border-radius: 0
+        border: none
+        background-color: red
+        -webkit-appearance: none
+        cursor: pointer
+    &__max
+      @extend .search-range__min
+    &-slider
+      position: relative
+      z-index: 1
+      height: 10px
+      &__track
+        position: absolute
+        z-index: 1
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        border-radius: 0.5s
+        background-color: rgba(0,0,0,0.1)
+      &__range
+        position: absolute
+        z-index: 2
+        left: 25%
+        right: 25%
+        top: 0
+        bottom: 0
+        border-radius: 5px
+        background-color: #ffffff
+      &-thumb
+        position: absolute
+        z-index: 3
+        width: 15px
+        height: 15px
+        background-color:#324261
+        border-radius: 50%
+        transform: translateY(-2px)
+        transition: box-shadow 0.3s ease-in-out
+        box-shadow: 0 0 0 0px rgba(#324261,0.1)
+        &__left
+          left: 25%
+        &__right
+          right: 25%
+          transform: translate(4px,-2px)
+        &.hover
+          box-shadow: 0 0 0 10px rgba(#324261,0.1)
+        &.active
+          box-shadow: 0 0 0 15px rgba(#324261,0.3)
+  &-button
+    &__submit
+      background: linear-gradient(92.85deg, #324261 7.55%, #000000 110.89%)
+      border-radius: 20px
+      +regular(14,12,#ffffff,500)
+      padding: 10px 40px
+      border: none  
+      cursor: pointer
+      transition: 0.4s
+      &:hover
+        background: linear-gradient(92.85deg, #10203f 7.55%, #000000 110.89%)
+    &__reset
+      @extend .search-button__submit
+      background: linear-gradient(92.85deg, #383838 7.55%, #AAAAAA 110.89%)
+      &:hover
+        background: linear-gradient(92.85deg, #161616 7.55%, #AAAAAA 110.89%) 

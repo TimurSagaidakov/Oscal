@@ -169,35 +169,57 @@
     </div>
 </section>
 <section class="special">
-    <div class="special-block">
-        <div class="container">
-            <div class="special-wrapper">
-                <div class="special-first">
-                    <div class="special-first-right">
-                        <div class="special-first-right__title">Спецпредложения</div>
-                        <a href="#" class="special-first-right__button">Выбрать</a>                        
-                    </div>                    
+    <div class="container">
+        <div class="special-block">
+            <div class="special-item">
+                <div class="special-item__img">
+                    <img src="img/special-1.png" alt="">
                 </div>
-                <div class="special-second">
-                    <div class="special-second-right">
-                        <div class="special-second-right__title">Все двери</div>
-                        <a href="#" class="special-second-right__button">Выбрать</a>
-                    </div>
+                <div class="special-item__img-mobile">
+                    <img src="img/special-mobile-1.png" alt="">
                 </div>
+                <div class="special-item-right">
+                    <div class="special-item-right__text">Спецпредложения</div>
+                    <a href="" class="special-item-right__button">
+                        Выбрать
+                    </a>                    
+                </div>                
             </div>
-            <div class="special-mobile">
-                <div class="special-mobile-item">
-                    <img src="img/special-mobile-1.png" alt="" class="special-mobile-item__img">
-                    <div class="special-mobile-item__title">Спецпредложения</div>
-                    <a href="#" class="special-mobile-item__button">Выбрать</a>                        
+            <div class="special-item">
+                <div class="special-item__img special-item__img-2">
+                    <img src="img/special-2.png" alt="">
                 </div>
-                <div class="special-mobile-item">
-                    <img src="img/special-mobile-2.png" alt="" class="special-mobile-item__img">
-                    <div class="special-mobile-item__title">Все двери</div>
-                    <a href="#" class="special-mobile-item__button">Выбрать</a>                        
+                <div class="special-item__img-mobile">
+                    <img src="img/special-mobile-2.png" alt="">
                 </div>
+                <div class="special-item-right special-item-right-2">
+                    <div class="special-item-right__text">Все двери</div>
+                    <a href="" class="special-item-right__button">
+                        Выбрать
+                    </a>                    
+                </div>                
             </div>
         </div>
+    </div>
+</section>
+<section class="search">
+    <div class="container">
+        <form class="search-block">
+            <output class="search__price">от <span class="min-price">0</span> руб</output>
+            <div class="search-range">
+                <input type="range" min='0' max='50000' step='1000' value="0" class="search-range__min">
+                <input type="range" min='0' max='50000' step='1000' value="35000" class="search-range__max">   
+                <div class="search-range-slider">
+                    <div class="search-range-slider__track"></div>
+                    <div class="search-range-slider__range"></div>
+                    <div class="search-range-slider-thumb search-range-slider-thumb__left"></div>
+                    <div class="search-range-slider-thumb search-range-slider-thumb__right"></div>                 
+                </div>             
+            </div>
+            <output class="search__price">до <span class="max-price">1000</span> руб</output>
+            <input type="submit" value="Подобрать" class="search-button__submit">
+            <div class="search-button__reset" onclick="sliderReset()">Сбросить</div>
+        </form>
     </div>
 </section>
 </main>
