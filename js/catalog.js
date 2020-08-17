@@ -57,7 +57,7 @@ inputRight.addEventListener('mouseup', function () {
 const sliderReset = function(){
   inputLeft.value = 0;
   setLeftValue();
-  inputRight.value = 35000;
+  inputRight.value = 50000;
   setRightValue();
 }
 

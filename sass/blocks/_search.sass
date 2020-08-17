@@ -1,11 +1,23 @@
 .search
-  background: rgba(50, 66, 97, 0.07)
+  background-color: #f4f4f4
+  &-filter
+    background: rgba(50, 66, 97, 0.07)
   &-block
     display: flex
     justify-content: space-between
+    position: relative
     align-items: center
     width: 100%
     padding: 20px 0
+    &::after
+      content: ''
+      display: inline-block
+      background: transparent
+      border: 16px solid transparent
+      border-top: 16px solid rgba(50, 66, 97, 0.07)
+      position: absolute
+      bottom: -32px
+      left: 0
   &__price
     flex: 0 0 15%
     +regular(14,14,rgba(44,44,44,0.5),500)
@@ -46,7 +58,7 @@
         right: 0
         top: 0
         bottom: 0
-        border-radius: 0.5s
+        border-radius: 5px
         background-color: rgba(0,0,0,0.1)
       &__range
         position: absolute
@@ -76,6 +88,7 @@
           box-shadow: 0 0 0 10px rgba(#324261,0.1)
         &.active
           box-shadow: 0 0 0 15px rgba(#324261,0.3)
+    
   &-button
     &__submit
       background: linear-gradient(92.85deg, #324261 7.55%, #000000 110.89%)
@@ -92,3 +105,28 @@
       background: linear-gradient(92.85deg, #383838 7.55%, #AAAAAA 110.89%)
       &:hover
         background: linear-gradient(92.85deg, #161616 7.55%, #AAAAAA 110.89%) 
+  &-result
+    margin: 30px 0 50px 0
+    +regular(12,10,#000000,500)
+  &-special
+    background: #EAEAEA
+    text-align: center
+    padding: 35px 0 25px 0
+    position: relative
+    &__title
+      +regular(24,18,$dark,bold)
+      margin-bottom: 30px
+    &__text
+      +regular(14,12,#000000,5000)
+    &::before
+      content: ''
+      display: block
+      background-color: #d5d5d5
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15)
+      width: 100%
+      height: 6px
+      position: absolute
+      top: 0
+      left: 0
+
+
