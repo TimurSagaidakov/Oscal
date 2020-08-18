@@ -5,6 +5,7 @@
   &-block
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     position: relative
     align-items: center
     width: 100%
@@ -23,11 +24,23 @@
     +regular(14,14,rgba(44,44,44,0.5),500)
     border: 1px solid #FFFFFF
     border-radius: 5px  
-    padding: 10px 10px
+    padding: 10px
+    letter-spacing: 1px
     background-color: transparent
+    @media ( max-width: $lg )
+      flex: 0 0 25%
+      text-align: center
+    @media ( max-width: $md )
+      flex: 0 0 49%
   &-range
     position: relative
-    flex: 0 0 35%
+    flex: 0 0 34%
+    @media ( max-width: $lg )
+      flex: 0 0 45%
+    @media ( max-width: $md )
+      flex: 0 0 100%
+      margin-top: 20px
+      order: 2
     &__min
       position: absolute
       z-index: 2
@@ -87,10 +100,22 @@
         &.hover
           box-shadow: 0 0 0 10px rgba(#324261,0.1)
         &.active
-          box-shadow: 0 0 0 15px rgba(#324261,0.3)
-    
+          box-shadow: 0 0 0 15px rgba(#324261,0.3)    
   &-button
+    display: flex
+    flex: 0 0 34%
+    justify-content: space-between
+    @media ( max-width: $lg )
+      flex: 0 0 100%
+      width: 30%
+      justify-content: center
+      margin-top: 20px
+    @media ( max-width: $md )
+      justify-content: space-between
+      order: 3
     &__submit
+      flex: 0 0 48%
+      text-align: center
       background: linear-gradient(92.85deg, #324261 7.55%, #000000 110.89%)
       border-radius: 20px
       +regular(14,12,#ffffff,500)
@@ -98,26 +123,39 @@
       border: none  
       cursor: pointer
       transition: 0.4s
+      @media ( max-width: $lg )
+        flex: 0 0 25%
+        margin-right: 15px
+      @media ( max-width: $md )
+        flex: 0 0 49%
+        margin-right: 0
       &:hover
         background: linear-gradient(92.85deg, #10203f 7.55%, #000000 110.89%)
     &__reset
       @extend .search-button__submit
       background: linear-gradient(92.85deg, #383838 7.55%, #AAAAAA 110.89%)
+      @media ( max-width: $lg )
+        margin-right: 0
       &:hover
         background: linear-gradient(92.85deg, #161616 7.55%, #AAAAAA 110.89%) 
   &-result
     margin: 30px 0 50px 0
     +regular(12,10,#000000,500)
+    @media ( max-width: $md )
+      margin: 20px 0 0 0 
   &-special
     background: #EAEAEA
     text-align: center
     padding: 35px 0 25px 0
     position: relative
+    @media ( max-width: $md )
+      display: none
     &__title
       +regular(24,18,$dark,bold)
       margin-bottom: 30px
     &__text
       +regular(14,12,#000000,5000)
+      line-height: 25px
     &::before
       content: ''
       display: block

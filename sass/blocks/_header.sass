@@ -60,34 +60,30 @@
                 @extend .button
     &-menu
         border-top: 1px solid #D9E0E1
+        position: relative
         @media ( max-width: $md )
             border: none
     &-navigation
         display: flex
+        position: relative
         list-style: none
         justify-content: space-between
         padding: 1.8rem 0 0 
         +regular(16,10,rgba(0,5,20,0.8), 500)
-        position: relative
         @media ( max-width: $md )
-            position: fixed
-            top: -555px
-            left: 0
-            right: 0
-            height: 100vh           
-            display: block
+            display: none
+            position: static
+            height: 100vh
+            width: 100vw
             +regular(30,30)  
             background: linear-gradient(204.92deg, rgba(50, 66, 97, 0.5) -15.76%, rgba(255, 255, 255, 0) 85.14%), #ffffff  
-            transform-origin: top
             opacity: 0
-            z-index: -1
             overflow-y: auto
             &.open
+                display: block
                 opacity: 1
-                top: 26%
-                z-index: 1000
                 &-scroll
-                    top: 69px
+                    margin-top: 69px
         &__link
             display: inline-block
             text-decoration: none
@@ -138,18 +134,18 @@
                 &:nth-of-type(2)                
                     display: none
                 &.move
-                    animation: menuRight 1.5s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
-                    animation-delay: 0.2s
+                    animation: menuRight 0.6s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+                    animation-delay: 0.1s
                     &:nth-of-type(3)
-                        animation-delay: 0.4s
+                        animation-delay: 0.2s
                     &:nth-of-type(4)
-                        animation-delay: 0.6s
+                        animation-delay: 0.3s
                     &:nth-of-type(5)
-                        animation-delay: 0.8s
+                        animation-delay: 0.4s
                     &:nth-of-type(6)
-                        animation-delay: 1s
+                        animation-delay: 0.5s
                     &:nth-of-type(7)
-                        animation-delay: 1.2s
+                        animation-delay: 0.6s
         &-wrapper
             position: absolute
             top: 0
@@ -235,7 +231,8 @@
             box-shadow: inset -1px -1px 2px #444444,inset 1px 0 2px #444444                        
             @media ( max-width: $md )
                 background-size: cover
-                height: 50vh
+                top: 70px
+                height: 75vh
                 transform: translateX(-1000px)
                 transition: 0.5s
                 display: block
@@ -310,9 +307,9 @@
             display: none
             box-shadow: inset -1px -1px 2px #888888,inset 1px 0 2px #888888
             @media ( max-width: $md )
+                top: 70px
                 background-image: url('../img/header-buyer-mobile.png')
-                background-position: right bottom
-                height: 50vh
+                height: 75vh
                 transform: translateX(-1000px)
                 transition: 0.5s
                 display: block

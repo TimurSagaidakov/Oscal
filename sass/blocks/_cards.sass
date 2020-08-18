@@ -1,0 +1,56 @@
+.cards
+  flex: 0 0 74%
+  @media ( max-width: $md )
+    flex: 0 0 100%
+  &-filter
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: 50px
+    @media ( max-width: $md )
+      justify-content: center
+      margin: 20px 0 
+      @media ( max-width: $sm )
+        justify-content: space-between
+    &__price
+      +regular(14,12,$dark,500)
+    &-button
+      display: flex
+      align-items: center
+      @media ( max-width: $sm )
+        flex: 0 0 65%
+        justify-content: space-between
+      @media ( max-width: $xs )
+        flex: 0 0 85%
+      &__increase
+        +regular(12,10,rgba(0,0,0,0.7),500)
+        display: flex
+        align-items: center
+        width: 180px
+        padding: 5px 
+        background-color: #fff
+        margin-left: 30px
+        cursor: pointer
+        transition: 0.2s
+        @media ( max-width: $sm )
+          width: auto
+          margin-left: 5px
+          padding: 5px
+        &::before
+          content: ''
+          display: block
+          border-top: 1px solid rgba(0, 0, 0, 0.7)
+          border-right: 1px solid rgba(0, 0, 0, 0.7)
+          width: 10px
+          height: 10px
+          transform: rotate(-45deg) translate(-3px,0px)
+          margin: 5px 14px
+          transition: 0.2s
+          @media ( max-width: $md )
+            width: 8px
+            height: 8px
+            margin: 5px
+      &__decrease
+        @extend .cards-filter-button__increase
+        &::before
+          transform: rotate(135deg) translate(0,3px)

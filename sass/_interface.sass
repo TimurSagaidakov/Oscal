@@ -75,8 +75,24 @@ strong
     display: block !important
 .lock
     overflow: hidden !important
+.fixed
+    position: fixed !important
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
 .show
     opacity: 1 !important
     z-index: 100000 !important
+.target
+    background: linear-gradient(90deg, #0047FF 0%, #9BCFFF 100%) !important
+    color: #ffffff !important
+    &::before
+        border-top: 1px solid rgba(255,255,255, 0.7) !important
+        border-right: 1px solid rgba(255,255,255, 0.7) !important
+.fullscreen
+    height: 100vh !important
+.no-padding
+    padding: 0 !important
 
 

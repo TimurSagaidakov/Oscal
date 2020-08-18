@@ -60,6 +60,18 @@ const sliderReset = function(){
   inputRight.value = 50000;
   setRightValue();
 }
+let filterCardsIncrease = document.querySelector('.cards-filter-button__increase'),
+    filterCardsDecrease = document.querySelector('.cards-filter-button__decrease');
+const filterIncrease = function(){
+  filterCardsDecrease.classList.remove('target')  
+  filterCardsIncrease.classList.toggle('target')
+}
+const filterDecrease = function(){
+  filterCardsIncrease.classList.remove('target')
+  filterCardsDecrease.classList.toggle('target')
+}
+
+
 
 
 

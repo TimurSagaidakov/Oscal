@@ -1,6 +1,8 @@
 .sidebar
-  width: 25%
+  flex: 0 0 25%
   margin-top: 50px
+  @media ( max-width: $md )
+    display: none
   &__title
     +regular(24,18,#324261,500)
     margin-bottom: 30px
@@ -17,6 +19,7 @@
     border: 4px solid #F4F8FF
     border-radius: 2px
     position: relative
+    line-height: 20px
     &::after
       content: ''
       display: block
