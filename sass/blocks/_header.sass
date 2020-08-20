@@ -196,20 +196,29 @@
             &-close
                 position: absolute
                 z-index: 3
+                width: 40px
+                height: 40px
                 top: 10px
                 right: 20px
                 cursor: pointer
+                border-radius: 50%
+                display: flex
+                align-items: center
+                transition: 0.2s
                 span
                     display: block
                     background-color: rgba(0, 0, 0, 0.5)
                     width: 30px
                     height: 2px
-                    transform-origin: left
-                    transform: rotate(45deg) translate(8px)
+                    transform: rotate(45deg)
+                    position: absolute
+                    top: 19px
+                    left: 5px
+                    transition: 0.2s
                     &:nth-of-type(2)
-                        transform-origin: right
-                        transform: rotate(-45deg) translate(-5px)
+                        transform: rotate(-45deg)
                 &:hover
+                    background-color: rgba(#f4f4f4,0.7)
                     span
                         background-color: $company-color
                 @media  ( max-width: $md)

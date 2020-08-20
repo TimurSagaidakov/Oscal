@@ -1,5 +1,5 @@
 .card
-  flex: 0 0 35%
+  flex: 0 0 45%
   display: flex
   padding: 20px
   flex-direction: column
@@ -9,8 +9,13 @@
   transition: 0.3s  
   background-color: #f4f4f4
   margin-bottom: 100px
+  @media ( max-width: $md )
+    margin-bottom: 50px
+  @media ( max-width: $sm )
+    padding: 10px
+    flex: 0 0 95%
   &:hover
-    z-index: 1
+    z-index: 4
     background-color: #fff
     border: none
     .card-hide
@@ -20,8 +25,10 @@
       right: 0
       bottom: -200px
       z-index: 3
+      @media ( max-width: $sm )
+        bottom: -190px
   &-price
-    display: flex
+    display: flex      
     &-primary
       display: flex
       flex-direction: column
@@ -34,13 +41,19 @@
       display: flex
       align-items: center
       &__from
-        +regular(18,12,$dark,500)  
+        +regular(18,16,$dark,500)  
         margin-right: 10px
       &__text
-        +regular(36,24,#000000,500) 
+        +regular(36,29,#000000,500)
+        display: flex
+        align-items: center
+        sup
+          +regular(18,16,#000000,500)
+          margin-left: 8px
   &-img
     display: flex
     align-items: center
+    justify-content: center
     &__front
       position: relative
       z-index: 2
@@ -57,10 +70,12 @@
         z-index: 3
       img
         width: 100%
-  
   &__title
-    +regular(18,12,#000000,500)
+    +regular(18,16,#000000,500)
     margin: 20px 0
+    line-height: 25px
+    @media ( max-width: $sm )
+      margin: 10px 0
     &::before
       content: ''
       display: block
@@ -70,6 +85,8 @@
       position: absolute
       bottom: 100px
       left: 0
+      @media ( max-width: $sm )
+        bottom: 60px
     &::after
       content: ''
       display: block
@@ -79,33 +96,37 @@
       position: absolute
       bottom: 105px
       right: 0
+      @media ( max-width: $sm )
+        bottom: 65px
   &-price
     display: flex
     justify-content: space-between
     align-items: center
     margin-top: 25px
+    @media ( max-width: $sm )
+      margin-top: 0
     &-new
       &__text
-        +regular(14,10,$company-color,500)
+        +regular(14,14,$company-color,500)
         margin-bottom: 5px
       &__number
         display: flex
         align-items: center
-        +regular(36,20,$company-color,500)
+        +regular(36,24,$company-color,500)
         sup
-          +regular(18,15,$company-color,500)
+          +regular(18,16,$company-color,500)
           margin-left: 8px
     &-old
       &__text
         margin-bottom: 5px
-        +regular(12,8,#aaaaaa,500)
+        +regular(12,12,#aaaaaa,500)
       &__number
         display: flex
         align-items: center
-        +regular(18,15,#aaaaaa,500)
+        +regular(18,16,#aaaaaa,500)
         text-decoration: line-through
         sup
-          +regular(12,10,#aaaaaa,500)
+          +regular(12,12,#aaaaaa,500)
           margin: 0 6px
   &__button
     @extend .button
@@ -132,7 +153,7 @@
       flex: 0 0 50%
       text-align: center
       padding: 10px 0
-      +regular(12,8,#000000,500)
+      +regular(12,12,#000000,500)
       background-color: rgba(0,0,0,0.1)
     &-hours
       display: flex
@@ -142,10 +163,11 @@
       background-color: rgba(50, 66, 97, 0.2)
       &__svg
       &__text
-        +regular(12,8,#000000,500)
+        +regular(12,12,#000000,500)
         margin-left: 8px
   &-hide
     background-color: #fff
     position: absolute
     opacity: 0
     bottom: 0
+      

@@ -46,12 +46,13 @@ const toggleBar = function () {
   fixedBar.classList.toggle('isShown', isShown);
   if(window.innerWidth<768){
     document.querySelector('.header-menu').classList.toggle('fixed', isShown);
+    document.querySelector('.header-navigation-services').classList.toggle('fullscreen', isShown);
+    document.querySelector('.header-navigation-buyer').classList.toggle('fullscreen', isShown);
   }
   document.querySelector('.header-mobile').classList.toggle('fixed',isShown);
   document.querySelector('.header-top').classList.toggle('delete', isShown);
   document.querySelector('.header-text-wrapper').classList.toggle('delete', isShown);
-  document.querySelector('.header-navigation-services').classList.toggle('fullscreen', isShown);
-  document.querySelector('.header-navigation-buyer').classList.toggle('fullscreen', isShown);
+  
 }
 toggleBar();
 window.addEventListener('scroll', toggleBar);

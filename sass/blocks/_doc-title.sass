@@ -2,11 +2,10 @@
   background-color: #f4f4f4
   padding: 40px 0
   margin-top: 0
-  &-wrapper
-    display: flex
-    justify-content: space-between    
   &__text
     +regular(18,13,#000000,bold)
+  &__card-title
+    +regular(18,15,#000000,500)
   &-crumb
     display: flex
     &__text
@@ -27,3 +26,18 @@
       &:first-child
         &::before
           display: none
+  &-card
+    display: flex
+    justify-content: space-between
+    &-wrapper
+      &::after
+        content: ''
+        display: block
+        background: linear-gradient(to right,$company-color 20%,#324261 20%)
+        width: 100%
+        height: 1px  
+        margin-top: 15px  
+    &__title
+      +regular(18,15,#000000,500)
+
+      

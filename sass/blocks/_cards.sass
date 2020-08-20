@@ -1,5 +1,5 @@
 .cards
-  flex: 0 0 74%
+  flex: 0 0 73%
   @media ( max-width: $md )
     flex: 0 0 100%
   &-filter
@@ -57,5 +57,7 @@
           transform: rotate(135deg) translate(0,3px)
   &-content
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     flex-wrap: wrap
+    @media ( max-width: $sm )
+      justify-content: center
