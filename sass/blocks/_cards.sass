@@ -7,6 +7,7 @@
     justify-content: flex-end
     align-items: center
     margin-top: 50px
+    margin-bottom: 30px
     @media ( max-width: $md )
       justify-content: center
       margin: 20px 0 
@@ -54,3 +55,7 @@
         @extend .cards-filter-button__increase
         &::before
           transform: rotate(135deg) translate(0,3px)
+  &-content
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap

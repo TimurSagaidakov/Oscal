@@ -1,0 +1,151 @@
+.card
+  flex: 0 0 35%
+  display: flex
+  padding: 20px
+  flex-direction: column
+  border: 4px solid #FFFFFF
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+  position: relative
+  transition: 0.3s  
+  background-color: #f4f4f4
+  margin-bottom: 100px
+  &:hover
+    z-index: 1
+    background-color: #fff
+    border: none
+    .card-hide
+      position: absolute
+      opacity: 1
+      left: 0
+      right: 0
+      bottom: -200px
+      z-index: 3
+  &-price
+    display: flex
+    &-primary
+      display: flex
+      flex-direction: column
+      align-items: flex-start !important
+    &__text
+      display: block
+      +regular(14,10,#818181,500)
+      margin-bottom: 5px
+    &-number
+      display: flex
+      align-items: center
+      &__from
+        +regular(18,12,$dark,500)  
+        margin-right: 10px
+      &__text
+        +regular(36,24,#000000,500) 
+  &-img
+    display: flex
+    align-items: center
+    &__front
+      position: relative
+      z-index: 2
+      transition: 0.2s
+      &:hover
+        transform: scale(1.05)
+      img
+        width: 100%
+    &__back
+      margin-left: -10px
+      transition: 0.2s
+      &:hover
+        transform: scale(1.05)
+        z-index: 3
+      img
+        width: 100%
+  
+  &__title
+    +regular(18,12,#000000,500)
+    margin: 20px 0
+    &::before
+      content: ''
+      display: block
+      background-color: #fff
+      height: 2px
+      width: 70%
+      position: absolute
+      bottom: 100px
+      left: 0
+    &::after
+      content: ''
+      display: block
+      background-color: #fff
+      height: 2px
+      width: 70%
+      position: absolute
+      bottom: 105px
+      right: 0
+  &-price
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 25px
+    &-new
+      &__text
+        +regular(14,10,$company-color,500)
+        margin-bottom: 5px
+      &__number
+        display: flex
+        align-items: center
+        +regular(36,20,$company-color,500)
+        sup
+          +regular(18,15,$company-color,500)
+          margin-left: 8px
+    &-old
+      &__text
+        margin-bottom: 5px
+        +regular(12,8,#aaaaaa,500)
+      &__number
+        display: flex
+        align-items: center
+        +regular(18,15,#aaaaaa,500)
+        text-decoration: line-through
+        sup
+          +regular(12,10,#aaaaaa,500)
+          margin: 0 6px
+  &__button
+    @extend .button
+    width: 80%
+    display: block
+    margin: 30px auto
+    padding: 7px 24px
+  &-description
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 0 20px
+    &__text
+      flex: 0 0 48%
+      +regular(12,9,#000000,500)
+      padding-bottom: 10px
+      margin-bottom: 15px
+      border-bottom: 2px solid #000000
+      &:nth-of-type(2n+2)
+        border-bottom: 2px solid $company-color
+  &-time
+    display: flex
+    &__period
+      flex: 0 0 50%
+      text-align: center
+      padding: 10px 0
+      +regular(12,8,#000000,500)
+      background-color: rgba(0,0,0,0.1)
+    &-hours
+      display: flex
+      align-items: center
+      justify-content: center
+      flex: 0 0 50%
+      background-color: rgba(50, 66, 97, 0.2)
+      &__svg
+      &__text
+        +regular(12,8,#000000,500)
+        margin-left: 8px
+  &-hide
+    background-color: #fff
+    position: absolute
+    opacity: 0
+    bottom: 0
