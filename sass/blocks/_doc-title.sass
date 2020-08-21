@@ -2,19 +2,23 @@
   background-color: #f4f4f4
   padding: 40px 0
   margin-top: 0
+  @media ( max-width: $sm )
+    padding: 15px 0
   &__text
     +regular(18,13,#000000,bold)
   &__card-title
     +regular(18,15,#000000,500)
   &-crumb
     display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
     &__text
       +regular(13,10,#2c2c2c,normal)
       display: flex
       align-items: center
       &:hover
         text-shadow: 0 0 1px rgba(0,0,0,0.5)
-      &::before
+      &::after
         content: ''
         display: block
         width: 6px
@@ -23,7 +27,9 @@
         border-right: 2px solid #2c2c2c
         transform: rotate(-45deg)
         margin: 0 5px
-      &:first-child
+      &:last-child
+        &::after
+          display: none
         &::before
           display: none
   &-card
@@ -39,5 +45,6 @@
         margin-top: 15px  
     &__title
       +regular(18,15,#000000,500)
+      line-height: 25px
 
       
