@@ -1,0 +1,55 @@
+.size
+  margin-top: 45px
+  padding-bottom: 35px
+  background-color: #f4f4f4
+  @media ( max-width: $md )
+    padding-bottom: 15px
+  &-block
+    display: flex
+    justify-content: space-between
+    @media ( max-width: $md )
+      flex-direction: column
+  &__title
+    margin-bottom: 20px
+    +regular(16,14,#000000,bold)
+    position: relative
+    z-index: 2
+  &-img
+    flex: 0 0 45%
+    padding: 20px
+    text-align: center
+    border: 4px solid #ECECEC
+    @media ( max-width: $md )
+      margin-bottom: 25px
+    &__door
+      img
+  &-fabricate
+    flex: 0 0 48%
+    background: linear-gradient(270.27deg, #FFFFFF 0.17%, rgba(196, 196, 196, 0) 99.72%)
+    background-image: url('../img/size-right.png')
+    background-size: cover
+    background-position: right
+    background-repeat: no-repeat
+    padding: 20px
+    position: relative
+    &-bg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(to right, #FFFFFF 0.17%, rgba(196, 196, 196, 0) 99.72%)
+    &__subtitle
+      +regular(14,12,$dark,500)
+      margin-bottom: 20px
+      position: relative
+      z-index: 2
+    &-list
+      margin-left: 25px
+      list-style: none
+      list-style-image: url('../img/card-tick.png')
+      position: relative
+      z-index: 2
+      &__text
+        margin-bottom: 20px
+        +regular(13,11,$dark,bold)

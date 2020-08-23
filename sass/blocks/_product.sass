@@ -71,6 +71,7 @@
         &-question
           margin-left: auto
           margin-right: 150px
+          cursor: pointer
           @media ( max-width: $xl )
             margin-right: 75px
           @media ( max-width: $md )
@@ -78,6 +79,9 @@
           &:hover
             .product-block-description-list-question__text
               opacity: 1
+            .product-block-description-list-question__svg svg
+              fill: $company-color
+              fill-opacity: 1
           &__text
             position: absolute
             bottom: 30px
@@ -103,3 +107,5 @@
             svg 
               display: block
               margin: auto
+              fill-opacity: 0.3
+              transition: 0.2s

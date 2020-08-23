@@ -1,0 +1,198 @@
+.complect
+  &__title
+    +regular(24,18,$dark,bold)
+    margin-bottom: 40px
+  &-block
+    display: flex
+    justify-content: space-between
+  &-left
+    flex: 0 0 40%
+    width: 40%
+    border: 4px solid #ECECEC
+    background-color: #ffffff
+    padding: 20px
+    &-type
+      display: flex
+      align-items: center
+      margin-bottom: 40px
+      &__ellipse
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        background-color: #f3f3f3
+        margin-right: 30px
+      &-text
+        &__title
+          +regular(14,10,#000000,500)
+          margin-bottom: 20px
+        &__description
+          +regular(13,9,#000000,normal)
+  &-color
+    width: 100%
+    position: relative
+    &-slider
+      width: 100%
+      &-item
+        text-align: center
+        &__ellipse
+          display: inline-block
+          width: 30px
+          height: 30px
+          background-color: #c4c4c4
+          border-radius: 50%
+          margin-right: auto
+          &-2
+            background-color: #cccccc
+          &-3
+            background-color: #aaaaaa
+          &-4
+            background-color: #999999
+          &-5
+            background-color: #777777
+          &-6
+            background-color: #888888
+          &-7
+            background-color: #555555
+          &-8
+            background-color: #000000
+      button
+        display: none
+    &-arrow
+      width: 100%
+      display: flex
+      justify-content: space-between
+      position: absolute
+      top: 37%
+      &__prev
+        display: block
+        width: 10px
+        height: 10px
+        border-bottom: 2px solid #000000
+        border-right: 2px solid #000000
+        transform: rotate(135deg) 
+        transition: 0.2s
+        &:hover
+          cursor: pointer
+          border-right: 2px solid $company-color
+          border-bottom: 2px solid $company-color
+      &__next
+        @extend .complect-color-arrow__prev
+        transform: rotate(-45deg) 
+    &__title
+      +regular(14,12,#000000,500)
+      margin-bottom: 20px
+    &__button
+      display: inline-block
+      margin-top: 20px
+      +regular(14,12,$company-color,500)
+      padding: 10px
+      border: 1px solid #BE0202
+      transition: 0.2s
+      &:hover
+        background-color: $company-color
+        color: #ffffff
+  &-door
+    margin-top: 35px
+    position: relative
+    &-slider
+      max-width: 500px
+      &-item
+        text-align: center
+        img
+          width: 100%
+    &-arrow
+      width: 100%
+      display: flex
+      justify-content: space-between
+      position: absolute
+      top: 49%
+      &__prev
+        display: block
+        width: 10px
+        height: 10px
+        border-bottom: 2px solid #000000
+        border-right: 2px solid #000000
+        transform: rotate(135deg) 
+        transition: 0.2s
+        &:hover
+          cursor: pointer
+          border-right: 2px solid $company-color
+          border-bottom: 2px solid $company-color
+      &__next
+        @extend .complect-door-arrow__prev
+        transform: rotate(-45deg)
+  &-right
+    flex: 0 0 55%
+    border: 4px solid #ECECEC
+    background-color: #ffffff
+    padding: 20px
+  &-lock
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &-item  
+      display: flex
+      flex: 0 0 48%
+      @media ( max-width: $xl )
+        margin-bottom: 30px
+        flex: 0 0 100%
+        &:last-child
+          margin-bottom: 0
+      &-description
+        flex: 0 0 60%
+      &__img
+        flex: 0 0 40%
+        border: 1px solid rgba(50, 66, 97, 0.3)
+        padding: 10px
+        img
+          width: 100%
+      &__title
+        width: 100%
+        height: 20%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 10px
+        background: rgba(50, 66, 97, 0.1)
+        +regular(14,12,#324261,bold)
+      &__name
+        height: 80%
+        +regular(18,16,#000000,bold)
+        display: flex
+        justify-content: center
+        align-items: center
+        background-image: url('../img/complect-lock-tr.png')
+  &-hand
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+    flex-wrap: wrap
+    &__img
+      flex: 0 0 40%
+      padding: 50px
+      border: 1px solid rgba(50, 66, 97, 0.3)
+      img
+        width: 100%
+    &-description
+      flex: 0 0 55%
+      @media ( max-width: $xl )
+        flex: 0 0 60%
+      &__title
+        height: 20%
+        padding: 10px
+        background: rgba(50, 66, 97, 0.1)
+        text-align: center
+        +regular(18,16,#000000,bold)
+      &__name
+        height: 80%
+        display: flex
+        justify-content: center
+        align-items: center
+        background-image: url('../img/complect-hand-tr.png')
+        background-size: 100%
+        background-position: bottom
+        background-repeat: no-repeat
+        text-transform: uppercase
+        +regular(20,18,#000000,bold)
+
+
