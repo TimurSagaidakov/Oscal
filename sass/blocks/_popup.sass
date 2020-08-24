@@ -1,5 +1,5 @@
 .popup
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   right: 0
@@ -129,20 +129,22 @@
       background-color: $company-color
       border-radius: 0px 20px 0px 0px 
   &-lock
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     right: 0
     bottom: 0
-    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: -2
     height: 100%
     background-color: rgba(0,0,0,0.7)
     transition: 0.2s
+    opacity: 0
+    transition: 0.2s
     &-wrapper
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%,-50%)
+      position: relative
       width: 1000px
       background-color: #fff
       @media ( max-width: 1060px )
@@ -151,6 +153,8 @@
         width: 500px
       @media ( max-width: $sm )
         width: 315px
+      @media ( max-width: $xs )
+        width: 290px
     &__price
       position: absolute
       top: 0
@@ -158,6 +162,8 @@
       padding: 5px 62px
       +regular(24,20,$company-color,normal)
       background-color: #EDEDED
+      @media ( max-width: $sm )
+        display: none
     &__back
       position: absolute
       bottom: 0
@@ -166,6 +172,10 @@
       +regular(14,12,#ffffff,500)
       background: rgba(50, 66, 97, 0.4)
       transition: 0.2s
+      @media ( max-width: $sm )
+        width: 100%
+        text-align: center
+        padding: 15px 0
       &:hover
         cursor: pointer
         background: rgba(50, 66, 97, 0.7)
@@ -173,6 +183,11 @@
       position: absolute
       bottom: 0
       left: 0
+      @media ( max-width: $md )
+        img
+          width: 70%
+      @media ( max-width: $sm )
+          display: none
     &-block
       display: flex
       justify-content: space-between
@@ -182,12 +197,18 @@
         justify-content: center
         align-items: center
         padding: 50px
+        @media ( max-width: $md )
+          padding: 10px
         img
           width: 100%
+        @media ( max-width: $sm )
+          display: none
       &-description
         flex: 0 0 60%
         background-color: #bdbdbd
         overflow: hidden
+        @media ( max-width: $sm )
+          flex: 0 0 100%
         &-function
           padding: 0 5%
           @media ( max-width: $md )
@@ -197,6 +218,9 @@
           background: #324261
           width: 60%
           margin-left: auto
+          @media ( max-width: $md )
+            width: 80%
+            transform: skew(60deg) translate(40px)
           &__text
             text-align: center
             padding: 10px 0
@@ -225,6 +249,8 @@
               width: 30px
               height: 100%
               transform: skew(60deg) translate(-55px)
+              @media ( max-width: $md )
+                transform: skew(60deg) translate(-45px)
         &-function
           &-line
             display: flex
@@ -241,3 +267,20 @@
         &__name
           +regular(64,50,#000000,bold)
           margin-bottom: 25px
+          @media ( max-width: $sm )
+            text-align: center
+  &-hand
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: -2
+    height: 100%
+    background-color: rgba(0,0,0,0.7)
+    transition: 0.2s
+    opacity: 0
+    transition: 0.2s
