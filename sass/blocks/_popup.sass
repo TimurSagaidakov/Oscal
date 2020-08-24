@@ -128,3 +128,116 @@
       padding: 5px 34px
       background-color: $company-color
       border-radius: 0px 20px 0px 0px 
+  &-lock
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1000
+    height: 100%
+    background-color: rgba(0,0,0,0.7)
+    transition: 0.2s
+    &-wrapper
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      width: 1000px
+      background-color: #fff
+      @media ( max-width: 1060px )
+        width: 750px
+      @media ( max-width: $md )
+        width: 500px
+      @media ( max-width: $sm )
+        width: 315px
+    &__price
+      position: absolute
+      top: 0
+      left: 0
+      padding: 5px 62px
+      +regular(24,20,$company-color,normal)
+      background-color: #EDEDED
+    &__back
+      position: absolute
+      bottom: 0
+      right: 0
+      padding: 15px 40px
+      +regular(14,12,#ffffff,500)
+      background: rgba(50, 66, 97, 0.4)
+      transition: 0.2s
+      &:hover
+        cursor: pointer
+        background: rgba(50, 66, 97, 0.7)
+    &__logo
+      position: absolute
+      bottom: 0
+      left: 0
+    &-block
+      display: flex
+      justify-content: space-between
+      &__img
+        flex: 0 0 40%
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 50px
+        img
+          width: 100%
+      &-description
+        flex: 0 0 60%
+        background-color: #bdbdbd
+        overflow: hidden
+        &-function
+          padding: 0 5%
+          @media ( max-width: $md )
+            margin-bottom: 50px
+        &-type
+          transform: skew(60deg) translate(50px)
+          background: #324261
+          width: 60%
+          margin-left: auto
+          &__text
+            text-align: center
+            padding: 10px 0
+            +regular(24,20,#ffffff,500)
+            position: relative
+            transform: skew(-60deg)
+            &::before
+              content: ''
+              display: block
+              position: absolute
+              top: 0
+              left: 0
+              z-index: 2
+              background: rgba(50, 66, 97, 0.5)
+              width: 30px
+              height: 100%
+              transform: skew(60deg) translate(-25px)
+            &::after
+              content: ''
+              display: block
+              position: absolute
+              top: 0
+              left: 0
+              z-index: 1
+              background: rgba(50, 66, 97, 0.1)
+              width: 30px
+              height: 100%
+              transform: skew(60deg) translate(-55px)
+        &-function
+          &-line
+            display: flex
+            justify-content: space-between
+            background-color: #e4e4e4
+            margin-bottom: 20px
+            padding: 10px 10px
+            @media ( max-width: $md )
+              margin-bottom: 5px
+            &__title
+              +regular(12,10,rgba(0,0,0,0.8),500)
+            &__text
+              +regular(14,12,#000000,bold)
+        &__name
+          +regular(64,50,#000000,bold)
+          margin-bottom: 25px
