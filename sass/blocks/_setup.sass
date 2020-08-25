@@ -1,0 +1,139 @@
+.setup
+  &-block
+    padding-bottom: 100px
+    @media ( max-width: $md )
+      padding-bottom: 70px
+    @media ( max-width: $sm )
+      padding-bottom: 40px
+  &-item
+    margin-top: 80px
+    display: flex
+    position: relative
+    @media ( max-width: $md )
+      margin-top: 50px
+    &__img
+      flex: 0 0 50%
+      position: relative
+      background-image: url('../img/setup.png')
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center top
+      @media ( max-width: $md )
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0.1
+      @media ( max-width: $sm )
+        background-position: right
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        right: -10px
+        top: 50%
+        transform: translate(0,-50%)
+        height: 70%
+        width: 10px
+        background-color: #324261
+        @media ( max-width: $md )
+          display: none
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -8px
+        left: 50%
+        transform: translate(-50%,0)
+        width: 70%
+        height: 10px
+        background-color: #324261
+        @media ( max-width: $md )
+          display: none
+        img
+          width: 100%
+    &-description
+      flex: 0 0 50%
+      padding: 0 5%
+      @media ( max-width: $md )
+        background-color: #324261
+        flex: 0 0 100%
+      @media ( max-width: $sm )
+        padding: 0 8%
+      &__title
+        +regular(18,16,$company-color,bold)
+        margin-bottom: 60px 
+        @media ( max-width: $md )
+          background-color: #ffffff
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          text-align: center
+          padding: 10px 0
+          line-height: 25px
+      &-list
+        list-style-image: url('../img/card-tick.png')
+        @media ( max-width: $md )
+          margin-top: 80px
+          list-style-image: url('../img/tick-mobile.svg')
+        &__point
+          +regular(12,10,#324261,500)
+          line-height: 25px
+          margin-bottom: 15px
+          @media ( max-width: $md )
+            color: #ffffff  
+            margin-bottom: 10px         
+      &__text
+        margin-top: 100px
+        +regular(14,12,#000000,300)
+        line-height: 35px
+        @media ( max-width: $lg )
+          margin-top: 0
+        @media ( max-width: $md )
+          line-height: 25px
+          color: #ffffff
+.montage
+  background-color: #fff
+  padding: 25px 0
+  @media ( max-width: $md )
+    padding: 0
+  &__text
+    margin-top: 0
+    @media ( max-width: $md )
+      margin-top: 50px
+  &__list
+    margin-top: 70px
+    @media ( max-width: $md )
+      margin-top: 10px
+  &__img
+    flex: 0 0 40%
+    background-image: url('../img/setup-1.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: right
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      right: -2px
+      top: 50%
+      transform: translate(0,-50%)
+      height: 70%
+      width: 10px
+      background-color: #324261
+      @media ( max-width: $md )
+        display: none
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: -8px
+      left: 50%
+      transform: translate(-50%,0)
+      width: 70%
+      height: 10px
+      background-color: #324261
+      @media ( max-width: $md )
+        display: none
