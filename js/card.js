@@ -98,4 +98,25 @@ $(document).ready(function () {
       }
   ]
   });
+  $('.similar-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: $('.similar-arrow__next'),
+    prevArrow: $('.similar-arrow__prev'),    
+    responsive:[
+      {
+          breakpoint: 992,
+          settings: {
+              slidesToShow: 2,
+          },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+            slidesToShow: 1,
+        },
+    },
+  ]
+  });
 })

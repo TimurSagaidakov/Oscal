@@ -1,0 +1,59 @@
+.howwork
+  &__title
+    +regular(36,16,$company-color,bold)
+    margin: 50px 0
+    @media ( max-width: $md )
+      margin: 25px 0
+  &-block
+    display: flex
+    justify-content: space-between
+    background-color: #ffffff
+    @media ( max-width: $md )
+      background-color: transparent
+      flex-direction: column
+  &-item
+    flex: 0 0 22%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 5px
+    height: 250px
+    background-color: #ffffff
+    background-repeat: no-repeat
+    position: relative
+    @media ( max-width: $md )
+      width: 80%
+      margin-bottom: 20px
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: -50px
+      height: 100%
+      width: 150px
+      background-color: #f4f4f4
+      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 30% 100%, 50% 49%, 30% 0) 
+      @media ( max-width: $md )
+        width: 50px
+        background-color: #ffffff
+        clip-path: polygon(0 0, 0% 100%, 100% 50%)
+    &:nth-child(1)      
+      background-image: url('../img/howwork-1.svg')
+    &:nth-child(2)
+      background-image: url('../img/howwork-2.svg')
+    &:nth-child(3)
+      background-image: url('../img/howwork-3.svg')
+    &:nth-child(4)
+      background-image: url('../img/howwork-4.svg')
+      @media ( min-width: $md+1)
+        &::after
+          display: none
+    &__text
+      width: 80%
+      margin-right: auto
+      margin-top: 50px
+      +regular(14,12,$dark,500)
+      line-height: 25px
+      @media ( max-width: $md )
+        width: 100%
+      

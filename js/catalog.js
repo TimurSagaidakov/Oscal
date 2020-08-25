@@ -70,15 +70,7 @@ const filterDecrease = function(){
   filterCardsIncrease.classList.remove('target')
   filterCardsDecrease.classList.toggle('target')
 }
-//let card = document.querySelectorAll('.card');
-//    for (let i = 0; i< card.length; i++)
-//    card[i].addEventListener('mouseover', function () {
-//      this.children[3].classList.add('card-show');
-//    });
-//   for (let i = 0; i< card.length; i++)
-//    card[i].addEventListener('mouseout', function () {
-//      card[i].children[3].classList.remove('card-show');
-//    });
+
 
 
 
