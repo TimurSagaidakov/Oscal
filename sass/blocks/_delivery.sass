@@ -1,0 +1,119 @@
+.delivery
+  &__title
+    +regular(36,24,#000000,bold)
+    padding: 40px 0
+  &-block
+    width: 70%
+    @media ( max-width: $md )
+      width: 100%
+  &-price
+    &__title
+      padding-bottom: 20px
+      +regular(18,14,#000000,500)
+    &-line
+      display: flex
+      justify-content: space-between
+      margin-bottom: 20px
+      @media ( max-width: $md )
+        flex-direction: column
+      &:nth-child(4)        
+        margin-bottom: 0
+      &__title
+        flex: 0 0 60%
+        padding: 16px
+        +regular(14,12,$dark,500)
+        background-color: #ECECEC
+        line-height: 25px
+        @media ( max-width: $md )
+          background-color: #ffffff
+      &__price
+        flex: 0 0 35%
+        padding: 16px
+        +regular(14,12,#000000,500)
+        background-color: #ECECEC
+        line-height: 25px
+        @media ( max-width: $md )
+          background: linear-gradient(90deg, #324261 0.29%, #74A2FF 100.29%)
+          color: #ffffff
+          clip-path: polygon(100% 0, 100% 0, 30% 100%, 0 100%, 0 0)
+  &-auto
+    background-image: url('../img/delivery-auto.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 80% bottom
+    height: 400px
+    @media ( max-width: $md )
+      background-position: 90%
+    @media ( max-width: $xs )
+      height: 250px
+    @media ( max-width: $sm )
+      background-image: url('../img/delivery-auto-mobile.png')
+      background-position: left top
+      background-size: 120%
+    &__text
+      width: 50%
+      margin-top: 50px
+      +regular(14,12,#2b2b2b,500)
+      line-height: 25px
+      @media ( max-width: $sm )
+        width: 70%
+        margin-left: auto
+        background: rgba(255, 255, 255, 0.7)
+        backdrop-filter: blur(10px)
+        border-radius: 5px
+        padding: 20px 5px
+      @media ( max-width: $xs )
+        width: 90%
+  &-payment
+    padding-bottom: 100px
+    @media ( max-width: $md )
+      padding-bottom: 50px
+    @media ( max-width: $sm )
+      padding-bottom: 25px
+    &__title
+      +regular(36,24,#000000,bold)
+      margin-bottom: 50px
+    &-block
+      display: flex
+      @media ( max-width: $sm )
+        flex-direction: column
+    &-item
+      flex: 0 0 50%
+      background: #ECECEC
+      position: relative
+      padding: 20px 70px 0 30px
+      @media ( max-width: $md )
+        padding: 20px 20px 0 20px
+      &:nth-child(2)
+        background-color: #DDDDDD
+      &__title
+        +regular(18,14,#000000,600)
+        margin-bottom: 40px
+      &-list
+        &__point
+          +regular(14,10,#000000,normal)
+          line-height: 25px
+          margin-bottom: 20px
+      &-card
+        display: flex
+        position: absolute
+        bottom: 0
+        left: 0
+        justify-content: space-around
+        @media ( max-width: $sm )
+          position: static
+        &__img
+          flex: 0 0 30%
+        img
+          width: 100%
+      &__img
+        img
+          width: 30%
+    &-footer
+      background-color: $company-color
+      padding: 14px
+      text-align: center
+      +regular(14,10,#ffffff,500)
+      line-height: 15px
+      @media ( max-width: $sm )
+        background: linear-gradient(90deg, #BE0202 0.53%, #390000 100%)
