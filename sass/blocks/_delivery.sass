@@ -16,7 +16,7 @@
       margin-bottom: 20px
       @media ( max-width: $md )
         flex-direction: column
-      &:nth-child(4)        
+      &:last-child        
         margin-bottom: 0
       &__title
         flex: 0 0 60%
@@ -117,3 +117,35 @@
       line-height: 15px
       @media ( max-width: $sm )
         background: linear-gradient(90deg, #BE0202 0.53%, #390000 100%)
+.repair
+  padding: 20px 0 75px 0 
+  @media ( min-width: $md+1 )
+    background-image: url('../img/repair-bg.png')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: right
+  @media ( max-width: $md )
+    padding: 20px 0
+  &-footer
+    background-color: #324261
+    @media ( max-width: $md )
+      padding: 0 10px
+    &-block
+      padding: 20px 0
+    &__title
+      +regular(18,14,#ffffff,500)
+      margin-bottom: 25px
+    &-list
+      line-height: 40px
+      list-style: none
+    &__point
+      +regular(14,12,#ffffff,normal)
+      display: flex
+      align-items: center
+      &::before
+        content: ''
+        background-color: $company-color
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        margin-right: 10px
