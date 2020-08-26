@@ -1,0 +1,122 @@
+.order
+  &__title
+    +regular(36,24,#000000,normal) 
+    padding: 40px 0 30px 0
+  &__text
+    +regular(14,10,$dark,normal)  
+    line-height: 25px
+    margin-bottom: 50px
+  &-block
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25)
+    background-color: #ffffff
+    padding: 30px 0
+    &__title
+      width: 50%
+      line-height: 35px
+      +regular(18,14,$company-color,bold)
+      margin-bottom: 50px
+      @media ( max-width: $md )
+        width: 100%
+  &-inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &-item
+      flex: 0 0 30%
+      background-image: url('../img/order-1.png')
+      background-repeat: no-repeat
+      border-radius: 20px
+      height: 250px
+      padding: 10px 0 0 10px
+      margin-bottom: 50px
+      position: relative
+      @media ( max-width: $md )
+        flex: 0 0 45%
+      @media ( max-width: $sm )
+        background-size: 100%
+        flex: 0 0 100%
+        margin-bottom: 25px
+      &:nth-child(1)
+        background-position: right
+      &:nth-child(2)
+        background-image: url('../img/order-2.png')
+      &:nth-child(3)
+        background-image: url('../img/order-3.png')
+      &:nth-child(4)
+        background-image: url('../img/order-4.png')
+      &:nth-child(5)
+        background-image: url('../img/order-5.png')
+      &:nth-child(6)
+        background-image: url('../img/order-6.png')
+      &__number
+        width: 54px
+        height: 54px
+        background: rgba($company-color,0.2)
+        backdrop-filter: blur(4px)
+        +regular(36,24,#ffffff,bold)
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+      &__description
+        height: 90px
+        background: rgba(255, 255, 255, 0.8)
+        backdrop-filter: blur(4px)
+        border-radius: 0px 0px 20px 20px
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        +regular(14,12,#000000,500)
+        padding: 15px
+        line-height: 25px
+  &-gage
+    &-block
+      padding: 50px 0
+      background-image: url('../img/gage-master.png')     
+      background-repeat: no-repeat
+      background-position: right bottom
+      background-size: contain
+      @media ( max-width: $lg )
+        background-size: 40%
+    &__title
+      +regular(24,18,#000000,bold)
+    &__subtitle 
+      +regular(14,12,$company-color,500)
+      margin: 20px 0 40px 0
+    &__can
+      +regular(18,14,#000000,500)
+      margin-bottom: 15px
+    &-list
+      width: 60%
+      margin-left: 25px
+      list-style-image: url('../img/order-arrow.svg')
+      &__point
+        display: block
+        +regular(16,12,#324261,normal)
+        margin-bottom: 15px
+        padding-left: 15px
+        line-height: 25px
+  &-last
+    background-color: #ffffff
+    padding: 15px 0
+    margin-bottom: 50px
+    @media ( max-width: $md )
+      margin-bottom: 25px
+    &__text
+      width: 75%
+      height: 100%
+      +regular(14,12,$dark,normal)
+      line-height: 35px
+      position: relative
+      @media ( max-width: $md )
+        width: 100%
+      &::before
+        content: ''
+        background-color: #324261
+        height: 100%
+        width: 2px
+        position: absolute
+        left: -20px
+        @media ( max-width: $sm )
+          left: -10px
