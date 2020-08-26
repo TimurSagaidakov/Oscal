@@ -1,0 +1,111 @@
+.sale
+  padding-top: 40px
+  @media ( max-width: $sm )
+    padding-top: 15px
+  &__title
+    +regular(36,24,#000000,500)
+    margin-bottom: 45px
+    @media ( max-width: $sm )
+      margin-bottom: 15px
+      padding-left: 15px
+  &-item  
+    display: flex
+    justify-content: space-between
+    margin-bottom: 50px
+    @media ( max-width: $md )
+      display: block
+      position: relative
+    &__img
+      flex: 0 0 49%
+      background-color: #ffffff 
+      img
+        width: 100%
+      @media ( max-width: $md )
+        position: relative
+        z-index: -1
+    &-description
+      flex: 0 0 49%
+      background-color: #ffffff
+      @media ( max-width: $md )
+        position: static
+      &__title
+        +regular(18,16,#000000,bold)
+        text-transform: uppercase
+        line-height: 35px
+        padding: 0 20px
+        @media ( max-width: $md )
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          padding: 0 5px
+          text-align: center
+          background: rgba(255, 255, 255, 0.7)
+          backdrop-filter: blur(8px)
+        &::after
+          content: ''
+          display: block
+          background: linear-gradient(to right, #BE0202 70%, #324261 70%)
+          width: 100%
+          height: 2px
+          margin-top: 5px
+          @media ( max-width: $md )
+            display: none
+      &__text
+        +regular(14,12,$dark,normal)
+        line-height: 25px
+        padding: 0 20px
+        margin-top: 20px
+        @media ( max-width: $md )
+          position: absolute
+          top: 80px
+          left: 0
+          right: 0
+          background: rgba(255, 255, 255, 0.7)
+          backdrop-filter: blur(8px)
+        @media ( max-width: $sm )
+          display: none
+      &__button
+        padding: 10px 25px
+        +regular(12,12,#ffffff,500)
+        background-color: $company-color
+        display: none
+        @media ( max-width: $md )
+          position: absolute
+          display: inline-block
+          bottom: -5px
+          right: 5px
+  &__line
+    width: 50%
+    +regular(14,10,#ffffff,500)
+    padding: 5px 15px
+    background: #324261
+    border-radius: 0px 30px 0px 0px
+    margin-bottom: 50px
+    @media ( max-width: $md )
+      width: 100%
+  &-policy
+    position: relative
+    &::before
+      content: ''
+      display: block
+      background: #324261
+      width: 70%
+      height: 1px
+      position: absolute
+      top: -20px
+      left: 0
+    &::after
+      content: ''
+      display: block
+      background: #324261
+      width: 70%
+      height: 1px
+      position: absolute
+      top: -15px
+      right: 0
+    &__text
+      +regular(18,16,$dark,normal)
+      line-height: 25px
+      @media ( max-width: $md )
+        padding: 0 5%
