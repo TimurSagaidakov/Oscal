@@ -2,6 +2,9 @@
   &__title
     +regular(36,24,#000000,bold)
     padding: 40px 0
+    @media ( max-width: $sm )
+      padding-left: 25px
+      padding-right: 25px
   &-block
     width: 70%
     @media ( max-width: $md )
@@ -117,6 +120,15 @@
       line-height: 15px
       @media ( max-width: $sm )
         background: linear-gradient(90deg, #BE0202 0.53%, #390000 100%)
+  &-text
+    +regular(16,14,#000000,500)
+    line-height: 35px
+    margin-bottom: 85px
+    @media ( max-width: $md )
+      margin-bottom: 40px
+    @media ( max-width: $sm )
+      padding-left: 25px
+      padding-right: 25px
 .repair
   padding: 20px 0 75px 0 
   @media ( min-width: $md+1 )

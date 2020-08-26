@@ -1,0 +1,67 @@
+.garanty
+  background-color: #ffffff
+  margin: 50px 0
+  &-block
+    padding: 40px 0
+  &__title
+    +regular(24,18,$company-color,500)
+    margin-bottom: 35px
+  &-list
+    list-style: none
+    width: 70%
+    @media ( max-width: $md )
+      margin-left: 25px
+  &__point
+    display: block
+    +regular(14,12,$dark,normal)
+    margin-bottom: 25px
+    line-height: 25px
+    position: relative
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 30%
+      left: -20px
+      background-color: $company-color
+      width: 6px
+      height: 6px
+      margin-right: 10px
+      border-radius: 50%
+  &-download
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25)
+    padding: 60px 0
+    background-image: url('../img/download-bg.png')
+    background-repeat: no-repeat
+    background-size: contain
+    @media ( max-width: $sm )
+      padding: 20px 0
+    &-block
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @media ( max-width: $sm )
+        flex-direction: column
+    &-info
+      @media ( max-width: $sm )
+        align-self: flex-start
+      &-item
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+        &__text
+          margin-left: 10px
+          +regular(14,12,#000000,500)
+          line-height: 25px
+    &-pdf 
+      text-align: center
+      @media ( max-width: $sm )
+        margin-top: 15px
+      &__text
+        +regular(14,14,#000000,normal)
+        @media ( max-width: $sm )
+          background-color: #324261
+          color: #ffffff
+          padding: 10px 40px
+
+
