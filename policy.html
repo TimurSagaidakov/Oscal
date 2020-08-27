@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оскал Политика конфидециальности</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/slick.css">
+</head>
+
+<body class="body-bg">
+  <header class="header">
+    <div class="header-text-wrapper">
+      <div class="container">
+        <span class="header-text__span">Российские металические двери</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-top">
+        <div class="header-top__img">
+          <img src="img/logo.svg" alt="Логотип двери">
+        </div>
+        <div class="header-top-second">
+          <div class="header-top-features">
+            <div class="header-top-features__red">14 лет</div>
+            <div class="header-top-features__dark">Делаем двери</div>
+          </div>
+          <div class="header-top-features">
+            <div class="header-top-features__red">Доставка</div>
+            <div class="header-top-features__dark">Москва, МО, РФ</div>
+          </div>
+        </div>
+        <div class="header-top-contacts">
+          <a href="tel:+74956668866" class="header-top-contacts__phone">+7 (495) 666 88 66</a>
+          <div class="header-top-contacts__shedule">c 8:00 до 22:00 Без выходных</div>
+          <div class="header-top-contacts__button" onclick="popupShow()">Заказать звонок</div>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <div class="header-mobile">
+        <div class="container">
+          <ul class="header-mobile-navigation">
+            <li><a href="index.html" class="header-mobile-navigation-link">
+                <svg width="40" height="34" viewBox="0 0 20 18">
+                  <path d="M8 17V11H12V17H17V9H20L10 0L0 9H3V17H8Z" />
+                </svg>
+                <div class="header-mobile-navigation-link__text">Главная</div>
+              </a></li>
+            <li>
+              <div class="header-navigation-mobile__header-navigation-catalog header-mobile-navigation-link">
+                <svg width="20" height="32" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 14C4 15.1 3.1 16 2 16C0.9 16 0 15.1 0 14C0 12.9 0.9 12 2 12C3.1 12 4 12.9 4 14ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM8 4C9.1 4 10 3.1 10 2C10 0.9 9.1 0 8 0C6.9 0 6 0.9 6 2C6 3.1 6.9 4 8 4ZM8 6C6.9 6 6 6.9 6 8C6 9.1 6.9 10 8 10C9.1 10 10 9.1 10 8C10 6.9 9.1 6 8 6ZM8 12C6.9 12 6 12.9 6 14C6 15.1 6.9 16 8 16C9.1 16 10 15.1 10 14C10 12.9 9.1 12 8 12Z" />
+                </svg>
+                <div class="header-mobile-navigation-link__text">Каталог</div>
+              </div>
+            </li>
+            <li><a href="#" class="header-mobile-navigation-link">
+                <svg width="32" height="38" viewBox="0 0 16 26" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.5 0.669922C9.5 0.669922 10.24 3.31992 10.24 5.46992C10.24 7.52992 8.89 9.19992 6.83 9.19992C4.76 9.19992 3.2 7.52992 3.2 5.46992L3.23 5.10992C1.21 7.50992 0 10.6199 0 13.9999C0 18.4199 3.58 21.9999 8 21.9999C12.42 21.9999 16 18.4199 16 13.9999C16 8.60992 13.41 3.79992 9.5 0.669922ZM7.71 18.9999C5.93 18.9999 4.49 17.5999 4.49 15.8599C4.49 14.2399 5.54 13.0999 7.3 12.7399C9.07 12.3799 10.9 11.5299 11.92 10.1599C12.31 11.4499 12.51 12.8099 12.51 14.1999C12.51 16.8499 10.36 18.9999 7.71 18.9999Z" />
+                </svg>
+                <div class="header-mobile-navigation-link__text">Акции</div>
+              </a></li>
+            <li><a href="tel:+74956668866" class="header-mobile-navigation-link">
+                <svg width="36" height="30" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.62 7.79C5.06 10.62 7.38 12.93 10.21 14.38L12.41 12.18C12.68 11.91 13.08 11.82 13.43 11.94C14.55 12.31 15.76 12.51 17 12.51C17.55 12.51 18 12.96 18 13.51V17C18 17.55 17.55 18 17 18C7.61 18 0 10.39 0 1C0 0.45 0.45 0 1 0H4.5C5.05 0 5.5 0.45 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z" />
+                </svg>
+                <div class="header-mobile-navigation-link__text">Позвонить</div>
+              </a></li>
+            <li class="header-mobile-navigation-link" onclick="menuMobileOpen()">
+              <div class="button-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="header-mobile-navigation-link__text">Меню</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container container-mobile">
+        <nav>
+          <ul class="header-navigation">
+            <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                <div class="header-navigation__link__button">Главная
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span>
+                </div>
+              </a></li>
+            <li class="header-navigation-li">
+              <div class="header-navigation__link">
+                <div class="header-navigation__link__button" onclick="funcCatalog()">Каталог
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span></div>
+                <div class="header-navigation-wrapper">
+                  <ul class="header-navigation-catalog">
+                    <li>
+                      <ul class="header-navigation-catalog-menu"><span
+                          class="header-navigation-catalog-menu__title">Ценовой сегмент</span>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">«Эконом» от
+                            6 000 р</a></li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">«Бизнес» о
+                            60 000 р</a></li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">«Элит» от
+                            60 000 р</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="header-navigation-catalog-menu"><span class="header-navigation-catalog-menu__title">Где
+                          устанавливаем
+                          ?</span>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">Квартира</a></li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">Коттедж</a>
+                        </li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">Загородный
+                            дом</a></li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">Уличные</a>
+                        </li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">Тамбур</a>
+                        </li>
+                        <li><a href="#" class="header-navigation-catalog-menu__link">Подъезд</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="header-navigation-catalog-menu"><span class="header-navigation-catalog-menu__title">Вид
+                          отделки</span>
+                        <li><a href="" class="header-navigation-catalog-menu__link">МДФ</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">ПВХ</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Ламинат</a>
+                        </li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Винилискожа</a>
+                        </li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Пластик</a>
+                        </li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Порошковое
+                            напыление</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Массив
+                            дуба</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Шпонированные
+                            двери</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Двери с
+                            резьбой</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Филенчатые
+                            двери</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="header-navigation-catalog-menu"><span class="header-navigation-catalog-menu__title">Тип
+                          конструкции</span>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Полуторастворчатые</a>
+                        </li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Двустворчатые</a>
+                        </li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Арочные</a>
+                        </li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Двери
+                            нестандартных размеров</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Двери
+                            больших размеров</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Высокие
+                            двери</a></li>
+                        <li><a href="" class="header-navigation-catalog-menu__link">Технические</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <div class="header-navigation-catalog-close" onclick="closeCatalog()">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </ul>
+                  <a href="#" class="header-navigation-catalog-full">
+                    Смотреть полный каталог
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="header-navigation-li">
+              <div class="header-navigation__link">
+                <div class="header-navigation__link__button " onclick="funcServices()">Сервис и услуги
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span>
+                </div>
+                <ul class="header-navigation-services">
+                  <img src="img/header-arrow.png" alt="" class="header-navigation-services__arrow"
+                    onclick="closeServices()">
+                  <li><span class="header-navigation-services__title">Сервис и услуги</span></li>
+                  <li><a href="#" class="header-navigation-services__link">Доставка и оплата</a></li>
+                  <li><a href="#" class="header-navigation-services__link">Установка дверей</a></li>
+                  <li><a href="#" class="header-navigation-services__link">Ремонт дверей</a></li>
+                  <li><a href="#" class="header-navigation-services__link">Гарантии</a></li>
+                  <li>
+                    <div class="header-navigation-catalog-close header-navigation-services-close"
+                      onclick="closeServices()">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </li>
+                  <div class="header-navigation-services__bg"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                <div class="header-navigation__link__button">Скидки и акции
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span>
+                </div>
+              </a></li>
+            <li class="header-navigation-li">
+              <div class="header-navigation__link">
+                <div class="header-navigation__link__button buyer__button" onclick="funcBuyer()">
+                  Покупателям
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span>
+                </div>
+                <ul class="header-navigation-buyer">
+                  <img src="img/header-arrow.png" alt="" class="header-navigation-services__arrow"
+                    onclick="closeBuyer()">
+                  <li><span class="header-navigation-services__title">Покупателям</span></li>
+                  <li><a href="#" class="header-navigation-buyer__link">Как заказать</a></li>
+                  <li><a href="#" class="header-navigation-buyer__link">Фото наших работ</a></li>
+                  <li><a href="#" class="header-navigation-buyer__link">Сотрудничество</a></li>
+                  <li><a href="#" class="header-navigation-buyer__link">Конструктор двери</a></li>
+                  <li>
+                    <div class="header-navigation-catalog-close" onclick="closeBuyer()">
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                <div class="header-navigation__link__button">О компании
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span>
+                </div>
+              </a></li>
+            <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                <div class="header-navigation__link__button">Контакты
+                  <span class="header-navigation-line__bottom"></span>
+                  <span class="header-navigation-line__right"></span>
+                </div>
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="about__title">
+      <div class="container">
+        <span>Политика конфидециальности</span>
+      </div>
+    </div>
+    <section class="policy">
+      <div class="container">
+        <div class="policy-block">
+          <div class="policy__title">
+            ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ ПЕРСОНАЛЬНЫХ ДАННЫХ
+          </div>
+          <div class="policy__text">
+            Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в
+            отношении всей информации, которую сайт argus196.ru - Магазин входных дверей АРГУС, (далее – Магазин входных
+            дверей АРГУС) расположенный на доменном имени argus196.ru (а также его субдоменах), может получить о
+            Пользователе во время использования сайта argus196.ru (а также его субдоменов), его программ и его
+            продуктов.
+          </div>
+          <div class="policy__title">
+            1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ
+          </div>
+          <div class="policy__text">
+            <p>1.1 В настоящей Политике конфиденциальности используются следующие термины:</p>
+            <p>1.1.1. «Администрация сайта» (далее – Администрация) – уполномоченные сотрудники на управление сайтом
+              Магазин входных дверей АРГУС, которые организуют и (или) осуществляют обработку персональных данных, а
+              также
+              определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия
+              (операции), совершаемые с персональными данными.</p>
+            <p>1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному, или
+              определяемому физическому лицу (субъекту персональных данных).</p>
+            <p>
+              1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций),
+              совершаемых с использованием средств автоматизации или без использования таких средств с персональными
+              данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение),
+              извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание,
+              блокирование,
+              удаление, уничтожение персональных данных.
+            </p>
+            <p>1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или иным
+              получившим
+              доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта
+              персональных данных или наличия иного законного основания.</p>
+            <p>1.1.5. «Сайт Магазин входных дверей АРГУС» - это совокупность связанных между собой веб-страниц,
+              размещенных
+              в сети Интернет по уникальному адресу (URL): argus196.ru, а также его субдоменах.</p>
+            <p>1.1.6. «Субдомены» - это страницы или совокупность страниц, расположенные на доменах третьего уровня,
+              принадлежащие сайту Магазин входных дверей АРГУС, а также другие временные страницы, внизу который указана
+              контактная информация Администрации</p>
+            <p>1.1.5. «Пользователь сайта Магазин входных дверей АРГУС » (далее Пользователь) – лицо, имеющее доступ к
+              сайту Магазин входных дверей АРГУС, посредством сети Интернет и использующее информацию, материалы и
+              продукты сайта Магазин входных дверей АРГУС.</p>
+            <p>1.1.7. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере
+              пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при
+              попытке открыть страницу соответствующего сайта.</p>
+            <p>1.1.8. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, через который Пользователь
+              получает
+              доступ на Магазин входных дверей АРГУС.</p>
+            <p> 1.1.9. «Товар » - продукт, который Пользователь заказывает на сайте и оплачивает через платёжные
+              системы.
+            </p>
+          </div>
+          <div class="policy__title">
+            2. ОБЩИЕ ПОЛОЖЕНИЯ
+          </div>
+          <div class="policy__text">
+            <p>2.1. Использование сайта Магазин входных дверей АРГУС Пользователем означает согласие с настоящей
+              Политикой
+              конфиденциальности и условиями обработки персональных данных Пользователя.</p>
+            <p>2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить
+              использование сайта Магазин входных дверей АРГУС .</p>
+            <p>2.3. Настоящая Политика конфиденциальности применяется к сайту Магазин входных дверей АРГУС. Магазин
+              входных
+              дверей АРГУС не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь
+              может
+              перейти по ссылкам, доступным на сайте Магазин входных дверей АРГУС.</p>
+            <p> 2.4. Администрация не проверяет достоверность персональных данных, предоставляемых Пользователем.
+            </p>
+          </div>
+          <div class="policy__title">
+            3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+          </div>
+          <div class="policy__text">
+            <p>3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации по неразглашению и
+              обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет по
+              запросу Администрации при регистрации на сайте Магазин входных дверей АРГУС, при подписке на
+              информационную
+              e-mail рассылку или при оформлении заказа.</p>
+            <p>3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности,
+              предоставляются Пользователем путём заполнения форм на сайте Магазин входных дверей АРГУС и включают в
+              себя
+              следующую информацию:</p>
+            <p>3.2.1. фамилию, имя, отчество Пользователя;</p>
+            <p>
+              3.2.2. контактный телефон Пользователя;
+            </p>
+            <p>3.2.3. адрес электронной почты (e-mail)</p>
+            <p>3.2.4. место жительство Пользователя (при необходимости)</p>
+            <p>3.2.5. адрес доставки Товара (при необходимости) 3.2.6. фотографию (при необходимости).</p>
+            <p>3.3. Магазин входных дверей АРГУС защищает Данные, которые автоматически передаются при посещении
+              страниц:
+              <ul class="policy__text-list">
+                <li>- IP адрес;</li>
+                <li>- информация из cookies;</li>
+                <li>- информация о браузере;</li>
+                <li>- время доступа;</li>
+                <li>- IP адрес;</li>
+                <li>- реферер (адрес предыдущей страницы).</li>
+              </ul>
+            </p>
+            <p>3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта , требующим авторизации.</p>
+            <p>
+              3.3.2. Магазин входных дверей АРГУС осуществляет сбор статистики об IP-адресах своих посетителей. Данная
+              информация используется с целью предотвращения, выявления и решения технических проблем.
+            </p>
+            <p>3.4. Любая иная персональная информация неоговоренная выше (история посещения, используемые браузеры,
+              операционные системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев,
+              предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.</p>
+          </div>
+          <div class="policy__title">
+            4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ
+          </div>
+          <div class="policy__text">
+            <p>4.1. Персональные данные Пользователя Администрация может использовать в целях:</p>
+            <p>4.1.1. Идентификации Пользователя, зарегистрированного на сайте Магазин входных дверей АРГУС для его
+              дальнейшей авторизации, оформления заказа и других действий.</p>
+            <p>4.1.2. Предоставления Пользователю доступа к персонализированным данным сайта Магазин входных дверей
+              АРГУС.</p>
+            <p>4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся
+              использования сайта Магазин входных дверей АРГУС, оказания услуг и обработки запросов и заявок от
+              Пользователя.</p>
+            <p>4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения
+              мошенничества.</p>
+            <p>4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.</p>
+            <p>4.1.6. Создания учетной записи для использования частей сайта Магазин входных дверей АРГУС, если
+              Пользователь дал согласие на создание учетной записи.</p>
+            <p>4.1.7. Уведомления Пользователя по электронной почте.</p>
+            <p>4.1.8. Предоставления Пользователю эффективной технической поддержки при возникновении проблем, связанных
+              с
+              использованием сайта Магазин входных дверей АРГУС.</p>
+            <p>4.1.9. Предоставления Пользователю с его согласия специальных предложений, информации о ценах, новостной
+              рассылки и иных сведений от имени сайта Магазин входных дверей АРГУС.</p>
+            <p>4.1.10. Осуществления рекламной деятельности с согласия Пользователя.</p>
+          </div>
+          <div class="policy__title">
+            5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ
+          </div>
+          <div class="policy__text">
+            <p>5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным
+              способом, в том числе в информационных системах персональных данных с использованием средств автоматизации
+              или без использования таких средств.</p>
+            <p>5.2. Пользователь соглашается с тем, что Администрация вправе передавать персональные данные третьим
+              лицам,
+              в частности, курьерским службам, организациями почтовой связи (в том числе электронной), операторам
+              электросвязи, исключительно в целях выполнения заказа Пользователя, оформленного на сайте Магазин входных
+              дверей АРГУС, включая доставку Товара, документации или e-mail сообщений.</p>
+            <p>5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти
+              Российской Федерации только по основаниям и в порядке, установленным законодательством Российской
+              Федерации.</p>
+            <p>5.4. При утрате или разглашении персональных данных Администрация вправе не информировать Пользователя об
+              утрате или разглашении персональных данных.</p>
+            <p>5.5. Администрация принимает необходимые организационные и технические меры для защиты персональной
+              информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования,
+              копирования, распространения, а также от иных неправомерных действий третьих лиц.</p>
+            <p>5.6. Администрация совместно с Пользователем принимает все необходимые меры по предотвращению убытков или
+              иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.</p>
+          </div>
+          <div class="policy__title">
+            6. ПРАВА И ОБЯЗАННОСТИ СТОРОН
+          </div>
+          <div class="policy__text">
+            <p>6.1. Пользователь вправе:</p>
+            <p>6.1.1. Принимать свободное решение о предоставлении своих персональных данных, необходимых для
+              использования
+              сайта Магазин входных дверей АРГУС, и давать согласие на их обработку.</p>
+            <p>6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной
+              информации.</p>
+            <p>6.1.3. Пользователь имеет право на получение у Администрации информации, касающейся обработки его
+              персональных данных, если такое право не ограничено в соответствии с федеральными законами. Пользователь
+              вправе требовать от Администрации уточнения его персональных данных, их блокирования или уничтожения в
+              случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не
+              являются необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по
+              защите своих прав.</p>
+            <p>6.2. Администрация обязана:</p>
+            <p>6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики
+              конфиденциальности.</p>
+            <p>6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного
+              письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо
+              разглашение
+              иными возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2 и 5.3.
+              настоящей Политики Конфиденциальности.</p>
+            <p>6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя
+              согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте.
+            </p>
+            <p>6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с
+              момента
+              обращения или запроса Пользователя, или его законного представителя либо уполномоченного органа по защите
+              прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных
+              данных
+              или неправомерных действий.</p>
+          </div>
+          <div class="policy__title">
+            7. ОТВЕТСТВЕННОСТЬ СТОРОН
+          </div>
+          <div class="policy__text">
+            <p>7.1. Администрация, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые
+              Пользователем в связи с неправомерным использованием персональных данных, в соответствии с
+              законодательством
+              Российской Федерации, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики
+              Конфиденциальности.</p>
+            <p>7.2. В случае утраты или разглашения Конфиденциальной информации Администрация не несёт ответственность,
+            </p>
+            если данная конфиденциальная информация:
+            <p>7.2.1. Стала публичным достоянием до её утраты или разглашения.</p>
+            <p>7.2.2. Была получена от третьей стороны до момента её получения Администрацией Ресурса.</p>
+            <p>7.2.3. Была разглашена с согласия Пользователя.</p>
+            <p>7.3. Пользователь несет полную ответственность за соблюдение требований законодательства РФ, в том числе
+              законов о рекламе, о защите авторских и смежных прав, об охране товарных знаков и знаков обслуживания, но
+              не
+              ограничиваясь перечисленным, включая полную ответственность за содержание и форму материалов.</p>
+            <p>7.4. Пользователь признает, что ответственность за любую информацию (в том числе, но не ограничиваясь:
+              файлы
+              с данными, тексты и т. д.), к которой он может иметь доступ как к части сайта Магазин входных дверей
+              АРГУС,
+              несет лицо, предоставившее такую информацию.</p>
+            <p>7.5. Пользователь соглашается, что информация, предоставленная ему как часть сайта Магазин входных дверей
+              АРГУС, может являться объектом интеллектуальной собственности, права на который защищены и принадлежат
+              другим Пользователям, партнерам или рекламодателям, которые размещают такую информацию на сайте Магазин
+              входных дверей АРГУС.
+              Пользователь не вправе вносить изменения, передавать в аренду, передавать на условиях займа, продавать,
+              распространять или создавать производные работы на основе такого Содержания (полностью или в части), за
+              исключением случаев, когда такие действия были письменно прямо разрешены собственниками такого Содержания
+              в
+              соответствии с условиями отдельного соглашения.</p>
+            <p>7.6. В отношение текстовых материалов (статей, публикаций, находящихся в свободном публичном доступе на
+              сайте Магазин входных дверей АРГУС) допускается их распространение при условии, что будет дана ссылка на
+              Магазин входных дверей АРГУС.</p>
+            <p>7.7. Администрация не несет ответственности перед Пользователем за любой убыток или ущерб, понесенный
+              Пользователем в результате удаления, сбоя или невозможности сохранения какого-либо Содержания и иных
+              коммуникационных данных, содержащихся на сайте Магазин входных дверей АРГУС или передаваемых через него.
+            </p>
+            <p>7.8. Администрация не несет ответственности за любые прямые или косвенные убытки, произошедшие из-за:
+              использования либо невозможности использования сайта, либо отдельных сервисов; несанкционированного
+              доступа
+              к коммуникациям Пользователя; заявления или поведение любого третьего лица на сайте.</p>
+            <p>7.9. Администрация не несет ответственность за какую-либо информацию, размещенную пользователем на сайте
+              Магазин входных дверей АРГУС, включая, но не ограничиваясь: информацию, защищенную авторским правом, без
+              прямого согласия владельца авторского права.</p>
+          </div>
+          <div class="policy__title">
+            8. РАЗРЕШЕНИЕ СПОРОВ
+          </div>
+          <div class="policy__text">
+            <p>8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем и Администрацией,
+              обязательным является предъявление претензии (письменного предложения или предложения в электронном виде о
+              добровольном урегулировании спора).</p>
+            <p>8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно или в
+              электронном виде уведомляет заявителя претензии о результатах рассмотрения претензии.</p>
+            <p>8.3. При не достижении соглашения спор будет передан на рассмотрение Арбитражного суда г. Екатеринбург.
+            </p>
+            <p>8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией
+              применяется
+              действующее законодательство Российской Федерации.</p>
+          </div>
+          <div class="policy__title">
+            9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ
+          </div>
+          <div class="policy__text">
+            <p>9.1. Администрация вправе вносить изменения в настоящую Политику конфиденциальности без согласия
+              Пользователя.</p>
+            <p>9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на сайте Магазин входных
+              дверей АРГУС, если иное не предусмотрено новой редакцией Политики конфиденциальности.</p>
+            <p> 9.3. Все предложения или вопросы касательно настоящей Политики конфиденциальности следует сообщать по
+              адресу: sale@argus196.ru
+            </p>
+            <p>Обновлено: 15 Августа 2018 года</p>
+            <p>г. Екатеринбург, ОГРНИП 316965800157317</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="popup">
+    <div class="popup-block">
+      <div class="popup-wrapper">
+        <div class="popup-show">
+          <div class="popup__title">Оформите заявку</div>
+          <div class="popup__contact">и наши менеджеры свяжутся с вами</div>
+          <form action="" class="popup-form">
+            <div class="popup-input">
+              <input type="text" class="popup__input" required="required">
+              <span class="popup-input__placeholder">
+                Ваше имя
+              </span>
+            </div>
+            <input type="tel" class="popup-input__phone" placeholder="+7 (___) ___ __ __">
+            <div class="popup-button">
+              <a type="submit" class="popup__submit" onclick="popupFinish()">Отправить</a>
+              <input type="reset" value="Сбросить" class="popup__reset">
+            </div>
+            <div class="popup-personal">
+              <label for="personal" class="popup-personal__label">
+                <input type="checkbox" class="popup-personal__checkbox" id="personal">
+                <span>Даю согласие на обработку персональных данный</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="popup-hide">
+          <div class="popup__title">Заявка оформлена</div>
+          <div class="popup-hide__name"></div>
+          <div class="popup-hide__phone"></div>
+          <div class="popup-hide__thanks">Благодарим за обращение</div>
+          <div class="popup-hide__company">Компания “Оскал”</div>
+        </div>
+      </div>
+      <div class="popup__close" onclick="popupClose()">
+        <svg width="18" height="18" class="popup__close">
+          <use xlink href="img/icons.svg#close">
+          </use>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <section class="request request-other">
+      <div class="container">
+        <div class="request-block">
+          <div class="request-left">
+            <h1 class="request__title">НУЖНА КОНСУЛЬТАЦИЯ ИЛИ ГОТОВЫ ВЫЗВАТЬ ЗАМЕРЩИКА?</h1>
+            <h2 class="request__subtitle">Мы предлагаем вам выгодные цены и сроки. С уважением, компания
+              "Оскал".</h2>
+            <form action="" class="request-form">
+              <div class="request-contacts">
+                <div class="request-input">
+                  <input type="text" class="request__input" required="required">
+                  <span class="request-input__placeholder">
+                    Ваше имя *
+                  </span>
+                </div>
+                <input type="tel" class="request-contacts__phone" placeholder="+7 (___) ___ __ __  *">
+              </div>
+              <div class="request-textarea">
+                <textarea type="textarea" class="request-textarea__input" required="required"></textarea>
+                <span class="request-textarea__placeholder">
+                  Сообщение
+                </span>
+              </div>
+              <span class="request-necessarily"><strong>*</strong> Обязательное поле для ввода </span>
+              <div class="request-button">
+                <a type="submit" class="request-button__submit" onclick="requestSend()">Отправить</a>
+                <input type="reset" value="Сбросить" class="request-button__reset">
+              </div>
+            </form>
+          </div>
+          <div class="request-hide">
+            <h1 class="request__title">Заявка отправлена</h1>
+            <span class="request-hide__name"></span>
+            <span class="request-hide__phone"></span>
+            <div class="request-hide-footer">
+              <span class="request-hide-footer__thanks">Благодарим за обращение </span>
+              <span class="request-hide-footer__company">Компания Оскал</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="request-callback">
+        <div class="container">
+          <span class="request-callback__big">Закажите звонок</span>
+          <span class="request-callback__small">...и мы перезвоним вам в течении 5 минут.</span>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <a href="index.html" class="footer-logo">
+            <img src="img/logo.svg" alt="Логотип">
+            <div class="footer-logo__name">Официальный производитель металлических дверей</div>
+          </a>
+          <nav class="footer-menu">
+            <div class="footer__title">Каталог дверей</div>
+            <ul class="footer-menu-list">
+              <li><a href="#" class="footer-menu-list__link">МДФ</a></li>
+              <li><a href="#" class="footer-menu-list__link">ПВХ</a></li>
+              <li><a href="#" class="footer-menu-list__link">Ламинат</a></li>
+              <li><a href="#" class="footer-menu-list__link">Винилискожа</a></li>
+              <li><a href="#" class="footer-menu-list__link">Пластик</a></li>
+              <li><a href="#" class="footer-menu-list__link">Порошковое напыление</a></li>
+              <li><a href="#" class="footer-menu-list__link">Массив дуба</a></li>
+              <li><a href="#" class="footer-menu-list__link">Шпонированные двери</a></li>
+              <li><a href="#" class="footer-menu-list__link">Двери с резьбой</a></li>
+              <li><a href="#" class="footer-menu-list__link">Филенчатые двери</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-menu">
+            <div class="footer__title">Быстрые ссылки</div>
+            <ul class="footer-menu-list">
+              <li><a href="#" class="footer-menu-list__link">Главная</a></li>
+              <li><a href="#" class="footer-menu-list__link">Каталог</a></li>
+              <li><a href="#" class="footer-menu-list__link">Сервис и услуги</a></li>
+              <li><a href="#" class="footer-menu-list__link">Скидки и акции</a></li>
+              <li><a href="#" class="footer-menu-list__link">Покупателям</a></li>
+              <li><a href="#" class="footer-menu-list__link">О компании</a></li>
+              <li><a href="#" class="footer-menu-list__link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-policy">
+        <div class="footer-policy-top">
+          <div class="container">
+            <div class="footer-policy-top-wrapper">
+              <div class="footer-policy-top__text">
+                Обращаем Ваше внимание на то, что вся представленная на сайте информация, касающаяся
+                комплектаций, технических характеристик, цветовых сочетаний, а также стоимости стальных
+                дверей, сроков изготовления и сервисного обслуживания носит информационный характер и ни
+                при каких условиях не является публичной офертой, определяемой положениями Статьи 437
+                (2) Гражданского кодекса Российской Федерации. Для получения подробной информации,
+                пожалуйста, обращайтесь к менеджерам-консультантам «Оскал». © 2020.
+              </div>
+              <div class="footer-policy-top-right">
+                <div class="footer-policy-top-right-links">
+                  <a href="#" class="footer-policy-top-right__link">Политика конфидециальности</a>
+                  <a href="#" class="footer-policy-top-right__link">Карта сайта</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-policy-down">
+          <div class="container">
+            <div class="footer-policy-down__text">ОСКАЛ © 2020. Копирование материалов запрещено</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+    type="text/javascript"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
