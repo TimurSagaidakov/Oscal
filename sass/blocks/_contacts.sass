@@ -1,0 +1,118 @@
+.contacts
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 55.78%, rgba(255, 255, 255, 0) 100%)
+  position: relative
+  margin-bottom: 100px
+  @media ( max-width: $md )
+    margin-bottom: 50px
+  @media ( max-width: $sm )
+    margin-bottom: 25px
+  &__title
+    @extend .about__title
+  &-block
+    display: flex
+    justify-content: space-between
+    @media ( max-width: $md )
+      flex-direction: column
+  &-left
+    flex: 0 0 55%
+    padding-top: 30px
+    @media ( max-width: $xl )
+      flex: 0 0 35%
+    &-item
+      display: flex
+      align-items: center
+      margin-bottom: 40px
+      &__svg
+        flex: 0 0 5%
+        img
+          width: 100%
+      &-text
+        margin-left: 30px
+        &__title
+          +regular(20,16,#000000,bold)
+        &__regular  
+          margin: 10px 0
+          +regular(16,12,$dark,500)
+  &-right
+    flex: 0 0 45%
+    background: linear-gradient(180deg, rgba(50, 66, 97, 0.7) 49.71%, rgba(50, 66, 97, 0) 85.72%)
+    padding: 0 5%
+    @media ( max-width: $xl )
+      flex: 0 0 60%
+    &__title
+      +regular(24,18,#ffffff,bold)
+      margin: 20px 0 30px 0
+      text-transform: uppercase
+    &__description
+      +regular(14,10,#ffffff,normal)
+      line-height: 25px
+      margin-bottom: 25px
+  &-input
+    position: relative
+    +regular(14,10,#ffffff,500)
+    overflow: hidden
+    &__placeholder
+      position: absolute
+      top: 15px
+      left: 15px
+      transition: 0.5s
+  &__input
+    border: 1px solid rgba(0,0,0,0.25)
+    width: 100%
+    padding: 15px
+    +regular(14,10,#ffffff,500)
+    background-color: transparent
+    &:focus + .contacts-input__placeholder
+      top: -50px
+    &:valid + .contacts-input__placeholder
+      top: -50px 
+  &-textarea
+    position: relative
+    +regular(14,10,#ffffff,500)
+    overflow: hidden
+    &__input
+      width: 100%
+      border: 1px solid rgba(0,0,0,0.25)
+      resize: none
+      height: 200px
+      +regular(14,10,#ffffff,500)
+      padding: 10px
+      background-color: transparent
+      &:focus + .contacts-textarea__placeholder
+        top: -50px
+      &:valid + .contacts-textarea__placeholder
+        top: -50px 
+    &__placeholder
+      position: absolute
+      top: 15px
+      left: 15px
+      transition: 0.5s
+  &-necessarily
+    display: block
+    +regular(14,10,#ffffff,500)
+    margin: 20px 0
+  &-button
+    padding-bottom: 90px
+    @media ( max-width: $md )
+      padding-bottom: 30px
+    &__submit
+      @extend .button
+    &__reset
+      @extend .button
+      background: linear-gradient(90deg, #324261 0%, #07090E 100%)
+      border: none
+      margin-left: 28px
+      &:hover
+        background: linear-gradient(90deg, #10203f 0%, #07090E 100%)
+  &__phone
+    width: 100%
+    margin: 25px 0
+    border: 1px solid rgba(0,0,0,0.25)
+    +regular(14,10,#ffffff,500)
+    padding: 15px
+    background-color: transparent
+    @media ( max-width: $md )
+      margin-top: 50px
+    &::placeholder
+      +regular(14,10,#ffffff,500)
+
