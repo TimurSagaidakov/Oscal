@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оскал Карточка товара</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/slick.css">
 </head>
 
 <body class="body-bg">
@@ -19,9 +17,9 @@
         </div>
         <div class="container">
             <div class="header-top">
-                <div class="header-top__img">
+                <a href="index.html" class="header-top__img">
                     <img src="img/logo.svg" alt="Логотип двери">
-                </div>
+                </a>
                 <div class="header-top-second">
                     <div class="header-top-features">
                         <div class="header-top-features__red">14 лет</div>
@@ -87,7 +85,7 @@
             <div class="container container-mobile">
                 <nav>
                     <ul class="header-navigation">
-                        <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                        <li class="header-navigation-li"><a href="index.html" class="header-navigation__link">
                                 <div class="header-navigation__link__button">Главная
                                     <span class="header-navigation-line__bottom"></span>
                                     <span class="header-navigation-line__right"></span>
@@ -103,8 +101,9 @@
                                         <li>
                                             <ul class="header-navigation-catalog-menu"><span
                                                     class="header-navigation-catalog-menu__title">Ценовой сегмент</span>
-                                                <li><a href="#" class="header-navigation-catalog-menu__link">«Эконом» от
-                                                        6 000 р</a></li>
+                                                <li><a href="catalog.html"
+                                                        class="header-navigation-catalog-menu__link">«Эконом» от 6 000
+                                                        р</a></li>
                                                 <li><a href="#" class="header-navigation-catalog-menu__link">«Бизнес» о
                                                         60 000 р</a></li>
                                                 <li><a href="#" class="header-navigation-catalog-menu__link">«Элит» от
@@ -181,7 +180,7 @@
                                             <span></span>
                                         </div>
                                     </ul>
-                                    <a href="#" class="header-navigation-catalog-full">
+                                    <a href="catalog.html" class="header-navigation-catalog-full">
                                         Смотреть полный каталог
                                     </a>
                                 </div>
@@ -197,10 +196,12 @@
                                     <img src="img/header-arrow.png" alt="" class="header-navigation-services__arrow"
                                         onclick="closeServices()">
                                     <li><span class="header-navigation-services__title">Сервис и услуги</span></li>
-                                    <li><a href="#" class="header-navigation-services__link">Доставка и оплата</a></li>
-                                    <li><a href="#" class="header-navigation-services__link">Установка дверей</a></li>
-                                    <li><a href="#" class="header-navigation-services__link">Ремонт дверей</a></li>
-                                    <li><a href="#" class="header-navigation-services__link">Гарантии</a></li>
+                                    <li><a href="delivery.html" class="header-navigation-services__link">Доставка и
+                                            оплата</a></li>
+                                    <li><a href="setup.html" class="header-navigation-services__link">Установка
+                                            дверей</a></li>
+                                    <li><a href="repair.html" class="header-navigation-services__link">Ремонт дверей</a></li>
+                                    <li><a href="garanty.html" class="header-navigation-services__link">Гарантии</a></li>
                                     <li>
                                         <div class="header-navigation-catalog-close header-navigation-services-close"
                                             onclick="closeServices()">
@@ -212,7 +213,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                        <li class="header-navigation-li"><a href="sales.html" class="header-navigation__link">
                                 <div class="header-navigation__link__button">Скидки и акции
                                     <span class="header-navigation-line__bottom"></span>
                                     <span class="header-navigation-line__right"></span>
@@ -229,7 +230,8 @@
                                     <img src="img/header-arrow.png" alt="" class="header-navigation-services__arrow"
                                         onclick="closeBuyer()">
                                     <li><span class="header-navigation-services__title">Покупателям</span></li>
-                                    <li><a href="#" class="header-navigation-buyer__link">Как заказать</a></li>
+                                    <li><a href="order.html" class="header-navigation-buyer__link">Как заказать</a>
+                                    </li>
                                     <li><a href="#" class="header-navigation-buyer__link">Фото наших работ</a></li>
                                     <li><a href="#" class="header-navigation-buyer__link">Сотрудничество</a></li>
                                     <li><a href="#" class="header-navigation-buyer__link">Конструктор двери</a></li>
@@ -242,13 +244,13 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                        <li class="header-navigation-li"><a href="about.html" class="header-navigation__link">
                                 <div class="header-navigation__link__button">О компании
                                     <span class="header-navigation-line__bottom"></span>
                                     <span class="header-navigation-line__right"></span>
                                 </div>
                             </a></li>
-                        <li class="header-navigation-li"><a href="#" class="header-navigation__link">
+                        <li class="header-navigation-li"><a href="contacts.html" class="header-navigation__link">
                                 <div class="header-navigation__link__button">Контакты
                                     <span class="header-navigation-line__bottom"></span>
                                     <span class="header-navigation-line__right"></span>
@@ -1021,7 +1023,7 @@
         </div>
     </section>
     <footer>
-        <section class="request request-other">
+        <section class="section request">
             <div class="container">
                 <div class="request-block">
                     <div class="request-left">
@@ -1054,8 +1056,8 @@
                     </div>
                     <div class="request-hide">
                         <h1 class="request__title">Заявка отправлена</h1>
-                        <span class="request-hide__name"></span>
-                        <span class="request-hide__phone"></span>
+                        <span class="request-hide__name">Jhon</span>
+                        <span class="request-hide__phone">+79342455246</span>
                         <div class="request-hide-footer">
                             <span class="request-hide-footer__thanks">Благодарим за обращение </span>
                             <span class="request-hide-footer__company">Компания Оскал</span>
@@ -1080,28 +1082,28 @@
                     <nav class="footer-menu">
                         <div class="footer__title">Каталог дверей</div>
                         <ul class="footer-menu-list">
-                            <li><a href="#" class="footer-menu-list__link">МДФ</a></li>
-                            <li><a href="#" class="footer-menu-list__link">ПВХ</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Ламинат</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Винилискожа</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Пластик</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Порошковое напыление</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Массив дуба</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Шпонированные двери</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Двери с резьбой</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Филенчатые двери</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">МДФ</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">ПВХ</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Ламинат</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Винилискожа</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Пластик</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Порошковое напыление</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Массив дуба</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Шпонированные двери</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Двери с резьбой</a></li>
+                            <li><a href="card.html" class="footer-menu-list__link">Филенчатые двери</a></li>
                         </ul>
                     </nav>
                     <nav class="footer-menu">
                         <div class="footer__title">Быстрые ссылки</div>
                         <ul class="footer-menu-list">
-                            <li><a href="#" class="footer-menu-list__link">Главная</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Каталог</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Сервис и услуги</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Скидки и акции</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Покупателям</a></li>
-                            <li><a href="#" class="footer-menu-list__link">О компании</a></li>
-                            <li><a href="#" class="footer-menu-list__link">Контакты</a></li>
+                            <li><a href="index.html" class="footer-menu-list__link">Главная</a></li>
+                            <li><a href="catalog.html" class="footer-menu-list__link">Каталог</a></li>
+                            <li><a href="repair.html" class="footer-menu-list__link">Сервис и услуги</a></li>
+                            <li><a href="sales.html" class="footer-menu-list__link">Скидки и акции</a></li>
+                            <li><a href="order.html" class="footer-menu-list__link">Покупателям</a></li>
+                            <li><a href="about.html" class="footer-menu-list__link">О компании</a></li>
+                            <li><a href="contacts.html" class="footer-menu-list__link">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -1120,7 +1122,8 @@
                             </div>
                             <div class="footer-policy-top-right">
                                 <div class="footer-policy-top-right-links">
-                                    <a href="#" class="footer-policy-top-right__link">Политика конфидециальности</a>
+                                    <a href="policy.html" class="footer-policy-top-right__link">Политика
+                                        конфидециальности</a>
                                     <a href="#" class="footer-policy-top-right__link">Карта сайта</a>
                                 </div>
                             </div>
