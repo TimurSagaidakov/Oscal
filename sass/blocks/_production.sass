@@ -1,0 +1,61 @@
+.production
+  background-image: url('../img/production.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  &__title
+    +regular(24,18,#000000,bold)
+    padding: 120px 0 50px 0
+    @media ( max-width: $md )
+      padding: 50px 5% 20px 5%
+  &-block
+    display: flex
+    background: rgba(255, 255, 255, 0.8)
+    @media ( max-width: $md )
+      flex-direction: column
+      backdrop-filter: blur(5px)
+    &__text
+      flex: 0 0 65%
+      padding: 120px
+      +regular(18,14,#000000,normal)
+      line-height: 35px
+      @media ( max-width: $xl )
+        padding: 70px
+      @media ( max-width: $md )
+        padding: 15px 5%
+    &-number
+      flex: 0 0 35%
+      display: flex
+      flex-direction: column
+      @media ( max-width: $md )
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 5%
+      &-square
+        flex: 0 0 50%
+        background-color: $company-color  
+        display: flex
+        align-items: center
+        justify-content: center
+        @media ( max-width: $md )
+          flex: 0 0 45%
+          padding: 0 2%
+        &:nth-child(2)
+          background-color: #324261
+      &__big
+        text-align: center
+        +regular(36,20,#ffffff,bold)
+        padding-bottom: 15px
+        @media ( max-width: $md )
+          padding: 15px 0
+        @media ( max-width: $xs )
+          padding: 10px 0
+      &__small
+        text-align: center
+        +regular(18,10,#ffffff,normal)
+        @media ( max-width: $md )
+          padding-bottom: 15px
+          line-height: 25px
+        @media ( max-width: $xs )
+          padding-bottom: 10px
+
