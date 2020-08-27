@@ -7,6 +7,7 @@
 		url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Montserrat';
@@ -17,6 +18,7 @@
 		url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Montserrat';
@@ -27,6 +29,7 @@
 		url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Constantia';
@@ -35,6 +38,7 @@
 		url('../fonts/Constantia.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Roboto';
@@ -44,6 +48,7 @@
 	url('..//fonts/Roboto-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 	}
 	@font-face {
 		font-family: 'Roboto';
@@ -53,6 +58,7 @@
 		url('../fonts/Roboto-Medium.ttf') format('truetype');
 		font-weight: 500;
 		font-style: normal;
+		font-display: swap;
 		}
 @mixin title ($pcSize, $mobSize, $color:null, $weight:normal){
 	font-family: 'Constantia';
