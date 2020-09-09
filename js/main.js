@@ -24,11 +24,7 @@ function closeBuyer(){
     }  
     document.querySelector('.header-navigation-buyer').classList.remove('buyer-open');
 }
-const fixedBar = document.querySelector('main');
 function menuMobileOpen(){
-    if(fixedBar.classList.contains('isShown')){
-        document.querySelector('.header-navigation').classList.toggle('open-scroll');
-    }
     document.querySelector('.header-navigation').classList.toggle('open');
     document.querySelector('.button-mobile').classList.toggle('close');
     document.querySelector('.container-mobile').classList.toggle('no-padding');
@@ -41,21 +37,7 @@ function menuMobileOpen(){
 };
 
 
-const toggleBar = function () {
-  let isShown = window.scrollY > 0;
-  fixedBar.classList.toggle('isShown', isShown);
-  if(window.innerWidth<768){
-    document.querySelector('.header-menu').classList.toggle('fixed', isShown);
-    document.querySelector('.header-navigation-services').classList.toggle('fullscreen', isShown);
-    document.querySelector('.header-navigation-buyer').classList.toggle('fullscreen', isShown);
-  }
-  document.querySelector('.header-mobile').classList.toggle('fixed',isShown);
-  document.querySelector('.header-top').classList.toggle('delete', isShown);
-  document.querySelector('.header-text-wrapper').classList.toggle('delete', isShown);
-  
-}
-toggleBar();
-window.addEventListener('scroll', toggleBar);
+
 
 
 
